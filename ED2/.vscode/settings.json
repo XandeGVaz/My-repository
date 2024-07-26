@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "estatic_hash.h": "c",
+        "knap_sack.h": "c",
+        "stdlib.h": "c",
+        "stdbool.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "aux.h": "c"
+    }
+}

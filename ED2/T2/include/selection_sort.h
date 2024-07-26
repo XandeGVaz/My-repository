@@ -1,0 +1,10 @@
+#ifndef SELECTION_H
+#define SELECTION_H
+
+#include "aux_functions.h"
+
+//////////////// Definição função de uso do selection-sort /////////////////////////
+void selection_sort(data *A, int size);
+///////////////////////////////////////////////////////////////////////////////////
+
+#endif

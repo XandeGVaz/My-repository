@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "selection_sort.h": "c",
+        "aux_functions.h": "c",
+        "merge_sort.h": "c",
+        "stdbool.h": "c"
+    }
+}
