@@ -498,3 +498,41 @@ h3,h4{
 .img3:hover{
     opacity: 0.2;
 }
+
+
+/*Propriedade Text Shadow e Box Shadow*/
+.tshadow_1{
+    font-size: 33px;
+    text-shadow: 2px 2px red;
+}
+.tshadow_2{
+    font-size: 33px;
+    text-shadow: 2px 2px 10px red;
+}
+.tshadow_3{
+    font-size: 33px;
+    text-shadow: 0px 8px 2px red, 0px 2px 2px blue;
+}
+.bshadow_1{
+    width: 800px;
+    height: 200px;
+    background-color: gray;
+    box-shadow: 5px 5px;
+}
+.bshadow_2{
+    width: 800px;
+    height: 200px;
+    background-color: gray;
+    box-shadow: 5px 5px 10px blue;
+}
+.card{
+    width: 40%;
+    margin: 0%;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.card img{
+    margin: 0%;
+    max-width: 100%;
+}

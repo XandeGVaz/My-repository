@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especifidades CSS</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1 id="title">Especifidades CSS</h1>
+    <p>
+        Vimos que há uma ordem de prioridade dos comandos de estilização CSS
+    </p>
+    <p>
+        A ordem de prioridade de CSS´s é:
+        <ol>
+            <li><text class="destaque">CSS inline</text>: na própria tag com "style=..."</li>
+            <li><text class="destaque">CSS interno</text>: no head do arquivo HTMl e a classe/id/seletor na tag</li>
+            <li><text class="destaque">CSS externo</text>: com um arquivo css a parte e a classe/id/seletor na tag</li>
+        </ol>
+    </p>
+    <p>
+        Porém, vale lembrar que identificadores (id), classes (class) e seletores também possuem prioridades (especifidades) diferentes
+    </p>
+    <p>
+        <a class="destaque" href="https://www.w3schools.com/css/css_specificity.asp" target="_blank">MAIS INFORMAÇÕES SOBRE ESPECIFIDADE AQUI!</a>
+    </p>
+
+    <h2>Ordem de especifidade</h2>
+    <h3>A ordem <text class="destaque">CRESCENTE</text> de especifidade no CSS é:</h3>
+    <ol>
+        <li>
+            <text class="destaque">SELETOR DE ESPECIFIDADE</text>: p{}
+        </li>
+        <li>
+            <text class="destaque">ELEMENTO DE UMA CLASSE</text>: .class p{}
+        </li>
+        <li>
+            <text class="destaque">CLASSE</text>: .class p{}
+        </li>
+        <li>
+            <text class="destaque">CLASSE ESPECIFICADA</text>: p.class{}
+        </li>
+        <li>
+            <text class="destaque">IDENTIFICADOR</text>: #ident 
+        </li>
+    </ol>
+
+    <h2>Important</h2>
+    <p>
+        Important é um recurso usado que <text class="destaque">FORÇA</text> uma atribuição ignorando efeitos de prioridade de:
+        <ul>
+            <li>Tipos de CSS</li>
+            <li>Ordem de Especifidade</li>
+        </ul>
+    </p>
+    <h3>Ter cuidado ao usar!</h3>
+    <p>
+        Muito bom para fazer testes de como a página ficaria com uma dada característica
+    </p>
+    <p>
+        Use com moderação no projeto, pois o uso em excesso torna seu uso inviável
+    </p>
+    <h3>Como usar:</h3>
+    <p>
+        " propriedade: ...<text class="destaque">!important</text>; "
+    </p>
+    <hr><br>
+    <p>
+        <a href="../../index.html">Voltar à página principal</a>
+    </p>
+</body>
+</html>

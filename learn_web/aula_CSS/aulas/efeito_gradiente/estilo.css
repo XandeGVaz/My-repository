@@ -1,0 +1,92 @@
+/*Estilização geral: feita com *{} */
+
+/*Estilização por tag*/
+body{
+    background: rgb(206, 237, 238);
+}
+
+
+h1,h2{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+h3,h4{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(187, 187, 6);
+}
+
+h1,h2,h3,h4,h5,p,hr,ul,ol{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+/*Estilização por classe*/
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.destaque{
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    margin:0%;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*Estilização por id*/
+#title{
+    text-align:center;
+    color: rgb(3, 68, 13);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: rgb(111, 224, 177);
+    border: 10px ridge white;
+    border-radius: 5px;
+}
+
+
+/*Efeito de gradiente*/
+/*Linear*/
+.ex_linear_grad1{
+    width: 700px;
+    height: 400px;
+    background-image: linear-gradient(45deg, rgba(16, 49, 235, 0.952), rgba(4, 215, 243, 0.979));
+}
+.ex_linear_grad2{
+    width: 700px;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(16, 49, 235, 0.952), rgba(233, 10, 10, 0.979));
+}
+.ex_linear_grad3{
+    width: 700px;
+    height: 400px;
+    background-image: linear-gradient(to bottom right, rgba(16, 49, 235, 0.952), rgba(233, 10, 10, 0.979)); /* diganol para baixo e direita: note a notação vetorial e a ordem das cores*/
+}
+/*Radial*/
+.ex_radial_grad1{
+    width: 700px;
+    height: 400px;
+    background-image: radial-gradient(rgba(16, 49, 235, 0.952), rgba(4, 215, 243, 0.979));
+}
+.ex_radial_grad2{
+    width: 700px;
+    height: 400px;
+    background-image: radial-gradient(rgba(16, 49, 235, 0.952) 50%, rgba(243, 4, 4, 0.979));
+}
+.ex_radial_grad3{
+    width: 700px;
+    height: 400px;
+    background-image: radial-gradient(rgba(233, 10, 10, 0.979), rgb(248, 0, 194)); /* diganol para baixo e direita: note a notação vetorial e a ordem das cores*/
+}
