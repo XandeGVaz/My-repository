@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de div</title>
+
+    <!--Meta tags adicionais-->
+    <meta name="description" content="Aula de HTML semântico"> <!--Descrição do site (aparece abaixo do link)-->
+    <meta name="keywords" content="div semântico HTML, div, semântico, HTML, html"> <!--Palavras chaves para que os navegadores ranqueiem sobre o que o site se trata (hoje em dia não faz tanta diferença devido à IA)-->
+    <meta name="author" content="Vitor Alexandre"> <!--espécie de assinatura da página-->
+
+    <!--Estilização com css das divs e seus componentes-->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+        }
+        .Aula{
+            background-color:rgb(168, 224, 206);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .Titulo{
+            background-color: rgb(141, 160, 160);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .Menu{
+            background-color:rgb(12, 12, 12);
+            overflow: hidden;
+            padding: 8px;
+        }
+
+        .Menu a {
+            color:white;
+            padding: 14px 14px;
+            float: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .Coluna-50{
+            float: left;
+            width: 50%;
+            padding: 15px;
+        }
+
+        .Return{
+            background-color: rgb(235, 16, 16);
+            padding: 20px;
+        }
+
+        .Return a{
+            color: aliceblue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background:rgb(245, 245, 248)">
+    
+    <div class="Aula">
+        <h1><a href="https://www.flaticon.com/br/icones-gratis/teia-semantica" title="teia semântica ícones" target="_blank"><img src="../Imagens/semantico_icon.png" width="35"></a>Aula Div</h1>
+    </div>
+
+
+    <div class="Titulo">
+        <h2>Título</h1>
+        <p>Coloque o título aqui</p>
+        <p>(Divs são tags genéricas que são estilizadas com css)</p>
+
+    </div>
+
+
+    <div class="Menu">
+        <a href="../index.html">Link1</a>
+        <a href="../index.html">Link2</a>
+        <a href="../index.html">Link3</a>
+        <a href="../index.html">Link4</a>
+    </div>
+
+
+    <div class="Coluna-50">
+        <h2>Coluna 1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam vero enim voluptate maxime tempore repudiandae, eum tenetur architecto possimus, ullam consequatur totam nostrum reiciendis quae vel nemo ut. Quaerat, quisquam!</p>
+    </div>
+
+
+    <div classs="Coluna-50">
+        <h2>Coluna 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusantium quas hic perspiciatis voluptatibus inventore enim exercitationem dolor voluptatum earum laborum, tenetur animi eveniet consequuntur aspernatur illum libero at nam!</p>
+    </div>
+
+    <div class="Return">
+        <a href="../index.html">Voltar à página principal</a>
+    </div>
+    
+</body>
+</html>

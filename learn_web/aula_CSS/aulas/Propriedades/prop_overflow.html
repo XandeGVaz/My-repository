@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Overflow</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1>Propriedade Overflow</h1>
+    <p>
+        Dita o comportamento do conteúdo dentro de sua div
+    </p>
+    <p>
+        Esta div tem que ter tamanho (width e height) determinados para que essa propriedade possa ser usada
+    </p>
+
+    <h2>Tipos - Overflow:</h2>
+    <p>
+        <ul>
+            <li>Visible (padrão)</li>
+            <li>Hidden</li>
+            <li>Scroll</li>
+            <li>Auto</li>
+        </ul>
+    </p>
+
+    <h2>Exemplos</h2>
+    <h3>Visible</h3>
+    <p class="destaque" style="margin: 3.3%">Tudo visível, mesmo o que está fora do tamanho da div</p>
+    <div class="overflow_visible">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam quis unde, omnis eius quod iure sint temporibus, qui aperiam dignissimos? Exercitationem eaque repellat nisi mollitia voluptates in repellendus similique.</p>
+        <p>Aliquam repellendus, praesentium quo modi eveniet sit expedita distinctio. Deleniti tempore sequi quam quis aspernatur quasi vero nihil inventore voluptates ipsam excepturi dolor et eligendi, hic optio sit odio praesentium!</p>
+        <p>Minus suscipit corporis iste aliquid. Omnis distinctio aspernatur eaque rerum repellat autem impedit magnam ea totam earum dolor, dignissimos sit, quidem aliquam modi maxime aliquid cupiditate quis officia pariatur molestiae.</p>
+        <p>Dicta dolorem deleniti cum tempora minus deserunt asperiores repudiandae optio atque, quisquam blanditiis totam error veritatis repellat molestias possimus voluptatum, tenetur minima quam voluptatem quis autem mollitia aut! Amet, iste!</p>
+        <p>Accusantium est nihil facilis, asperiores dolore consequuntur repellat, harum placeat facere nulla numquam praesentium debitis cupiditate. Doloremque obcaecati, consectetur iusto ipsum sed unde neque, odit inventore eaque reiciendis dicta porro.</p>
+        <p>Minus sequi optio architecto, ex dolor maxime? Sunt quisquam voluptate natus tempore at assumenda atque mollitia expedita dolore. Quidem eaque cupiditate placeat expedita ab dolorum illum commodi dolores, provident tempora.</p>
+    </div>
+    <br><br><br><br><br><br>
+
+    <h3>Hidden</h3>
+    <p class="destaque" style="margin: 3.3%">O que está fora do tamanho da div é ocultado</p>
+    <div class="overflow_hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam quis unde, omnis eius quod iure sint temporibus, qui aperiam dignissimos? Exercitationem eaque repellat nisi mollitia voluptates in repellendus similique.</p>
+        <p>Aliquam repellendus, praesentium quo modi eveniet sit expedita distinctio. Deleniti tempore sequi quam quis aspernatur quasi vero nihil inventore voluptates ipsam excepturi dolor et eligendi, hic optio sit odio praesentium!</p>
+        <p>Minus suscipit corporis iste aliquid. Omnis distinctio aspernatur eaque rerum repellat autem impedit magnam ea totam earum dolor, dignissimos sit, quidem aliquam modi maxime aliquid cupiditate quis officia pariatur molestiae.</p>
+        <p>Dicta dolorem deleniti cum tempora minus deserunt asperiores repudiandae optio atque, quisquam blanditiis totam error veritatis repellat molestias possimus voluptatum, tenetur minima quam voluptatem quis autem mollitia aut! Amet, iste!</p>
+        <p>Accusantium est nihil facilis, asperiores dolore consequuntur repellat, harum placeat facere nulla numquam praesentium debitis cupiditate. Doloremque obcaecati, consectetur iusto ipsum sed unde neque, odit inventore eaque reiciendis dicta porro.</p>
+        <p>Minus sequi optio architecto, ex dolor maxime? Sunt quisquam voluptate natus tempore at assumenda atque mollitia expedita dolore. Quidem eaque cupiditate placeat expedita ab dolorum illum commodi dolores, provident tempora.</p>
+    </div>
+
+    <h3>Scroll</h3>
+    <p class="destaque" style="margin: 3.3%">Implementa-se rolagem para ambos os eixos, permitindo ver todo o conteúdo com o scroll da tela</p>
+    <div class="overflow_scroll">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam quis unde, omnis eius quod iure sint temporibus, qui aperiam dignissimos? Exercitationem eaque repellat nisi mollitia voluptates in repellendus similique.</p>
+        <p>Aliquam repellendus, praesentium quo modi eveniet sit expedita distinctio. Deleniti tempore sequi quam quis aspernatur quasi vero nihil inventore voluptates ipsam excepturi dolor et eligendi, hic optio sit odio praesentium!</p>
+        <p>Minus suscipit corporis iste aliquid. Omnis distinctio aspernatur eaque rerum repellat autem impedit magnam ea totam earum dolor, dignissimos sit, quidem aliquam modi maxime aliquid cupiditate quis officia pariatur molestiae.</p>
+        <p>Dicta dolorem deleniti cum tempora minus deserunt asperiores repudiandae optio atque, quisquam blanditiis totam error veritatis repellat molestias possimus voluptatum, tenetur minima quam voluptatem quis autem mollitia aut! Amet, iste!</p>
+        <p>Accusantium est nihil facilis, asperiores dolore consequuntur repellat, harum placeat facere nulla numquam praesentium debitis cupiditate. Doloremque obcaecati, consectetur iusto ipsum sed unde neque, odit inventore eaque reiciendis dicta porro.</p>
+        <p>Minus sequi optio architecto, ex dolor maxime? Sunt quisquam voluptate natus tempore at assumenda atque mollitia expedita dolore. Quidem eaque cupiditate placeat expedita ab dolorum illum commodi dolores, provident tempora.</p>
+    </div>
+
+    <h3>Auto</h3>
+    <p class="destaque" style="margin: 3.3%">Implementa-se rolagem para apenas os eixos que necessitam desse mecanismo para que o usuário posso ver todo o conteúdo. Essa verificação e implementação dos scrolls vertical e horizontal (ou não) é feita automaticamente e de acordo com a tela do usuário</p>
+    <div class="overflow_auto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam quis unde, omnis eius quod iure sint temporibus, qui aperiam dignissimos? Exercitationem eaque repellat nisi mollitia voluptates in repellendus similique.</p>
+        <p>Aliquam repellendus, praesentium quo modi eveniet sit expedita distinctio. Deleniti tempore sequi quam quis aspernatur quasi vero nihil inventore voluptates ipsam excepturi dolor et eligendi, hic optio sit odio praesentium!</p>
+        <p>Minus suscipit corporis iste aliquid. Omnis distinctio aspernatur eaque rerum repellat autem impedit magnam ea totam earum dolor, dignissimos sit, quidem aliquam modi maxime aliquid cupiditate quis officia pariatur molestiae.</p>
+        <p>Dicta dolorem deleniti cum tempora minus deserunt asperiores repudiandae optio atque, quisquam blanditiis totam error veritatis repellat molestias possimus voluptatum, tenetur minima quam voluptatem quis autem mollitia aut! Amet, iste!</p>
+        <p>Accusantium est nihil facilis, asperiores dolore consequuntur repellat, harum placeat facere nulla numquam praesentium debitis cupiditate. Doloremque obcaecati, consectetur iusto ipsum sed unde neque, odit inventore eaque reiciendis dicta porro.</p>
+        <p>Minus sequi optio architecto, ex dolor maxime? Sunt quisquam voluptate natus tempore at assumenda atque mollitia expedita dolore. Quidem eaque cupiditate placeat expedita ab dolorum illum commodi dolores, provident tempora.</p>
+    </div>
+
+    
+
+    <hr><br>
+    <a href="./propriedades.html">Voltar à central de propriedades</a>
+</body>
+</html>

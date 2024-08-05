@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de iframes em HTML</title>
+
+    <!--Meta tags adicionais-->
+    <meta name="description" content="Aula de iframes em HTML"> <!--Descrição do site (aparece abaixo do link)-->
+    <meta name="keywords" content="iframes HTML, iframes, HTML, html"> <!--Palavras chaves para que os navegadores ranqueiem sobre o que o site se trata (hoje em dia não faz tanta diferença devido à IA)-->
+    <meta name="author" content="Vitor Alexandre"> <!--espécie de assinatura da página-->
+</head>
+<body style="background:goldenrod">
+
+    <h1><a href="https://www.flaticon.com/br/icones-gratis/monitor" title="monitor ícones" target="_blank"><img src="../Imagens/recursion_icon.png" width="30"></a>Aula Iframes</h1>
+
+    <h2>O que é?</h2>
+
+    <h3>Primeiro exemplo</h3>
+    <p>
+        Iframes permitem colocar páginas dentro de outras páginas, como da seguinte forma:
+    </p>
+
+    <iframe src="./aula_html.html" width="70%" height="600" 
+        title="tags-principais">
+    </iframe>
+
+    <p>
+        Este é um iframe com borda que ocupa 70% da largura da página e que tem 600 pixels de altura
+    </p>
+
+    <h3>Exemplo sem borda</h3>
+
+    <iframe style="border:none;" src="./aula_html.html" width="70%" height="600" 
+    
+        title="tags-principais-sb">
+    </iframe>
+
+    <hr>
+
+    <h2>Exemplos de uso de iframes</h2>
+    <h3>Incorporar outros sites</h3>
+    <iframe style="border:none;" src="https://blog.betrybe.com/html/iframe-html/" width="400" height="210" title="explica-iframes"></iframe>
+    <h3>Incorporar vídeos</h3>
+    <iframe width="400" height="210" src="https://www.youtube.com/embed/WA0ncEZ3FcE?si=Vd_FSizzKB44MjfL" title="YouTube_video_player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <hr>
+
+    <h2> Renderização de páginas por links</h2>
+    <a href="./aula_html.html" target="inframe-tags-principais"> Explica tags principais</a>
+    <iframe style="border:none;" name="inframe-tags-principais" title="inframe-tags-principais" width="400" height="210"></iframe>
+    <p>
+        Isso permite deixar o site mais dinâmico.
+        
+    </p>
+    <p>
+        Além disso, caso precise fazer um menu para uma página por exemplo, posso fazer um arquivo html isolado para o menu e utilizar um iframe para utilizar o menu na página desejada, permitindo uma maior modularização do código do site.
+       
+    </p>
+    <p>
+        Apesar disso, esses recursos não são mais tão utilizados, já que, atualmente, existem ferramentas melhores de dinamização dos sites
+    </p>
+    
+    <hr>
+
+    <a href="../index.html">Voltar à página principal</a>
+</body>
+</html>

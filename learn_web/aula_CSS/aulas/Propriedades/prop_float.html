@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Float</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1>Propriedade Float</h1>
+
+    <h2>Como funciona</h2>
+    <p>
+        O principal objetivo do float não é o posicionamento, mas sim a criação de um efeito visual de contorno 
+    </p>
+    <p>
+        Essa propriedade permite que um elemento se "desprenda" da div (flutue) e assuma uma posição desejada criando um efeito em relação aos elementos ao redor
+    </p>
+    <p>
+        Com isso, o elemento assume tal posição e os demais elementos da div se rearranjam de forma a concordar com tal posicionamento
+    </p>
+    <p>
+        Funciona escrevendo: <text class="destaque">float: --posição--</text>
+        (top, right, bottom, left)
+    </p>
+
+    <h2>Usos recorrentes</h2>
+    <h3>Diagramação de sites/informações</h3>
+    <p>
+        A propriedade float permite a disposição de elementos de forma mais organizada e/ou visualmente bonita na página web
+    </p>
+    <h4>Veja</h4>
+    <div class="ex_float_fundo">
+        <img src="../../img/cidade.jpg">
+        <h2>Título</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptas accusamus, officiis similique iusto tempora doloribus tempore hic, enim, modi quibusdam illo. Asperiores veniam ullam nobis maxime amet quaerat harum?</p>
+        <p>Explicabo, ducimus molestias natus in eligendi atque, labore repudiandae libero vero eius dolor amet, animi inventore fugiat ab nisi voluptatum facere repellendus rerum velit reiciendis officiis quasi voluptates ad! Quo.</p>
+        <p>Quod unde harum, repellendus illo quaerat quam iusto quasi minus incidunt. Accusamus exercitationem fugit mollitia, necessitatibus aliquid laboriosam aliquam architecto ea. Fuga dignissimos tenetur eaque minima. Aliquid natus pariatur officiis!</p>
+        <p>Illo libero assumenda sint quasi harum beatae esse, asperiores eveniet cumque fugit odio possimus expedita eius at veritatis? Perferendis illo quas voluptatum a perspiciatis harum commodi. In dicta alias magnam.</p>
+        <p>Illo itaque nemo alias consequatur quia odit reprehenderit, est voluptates qui nesciunt soluta dolor labore corrupti dolorum consequuntur! Cumque exercitationem necessitatibus perspiciatis tenetur, neque eveniet minus sint quos! Id, harum.</p>
+        <p>Harum impedit debitis ducimus nemo et dolores doloremque esse, autem recusandae, eligendi iusto deserunt cupiditate dicta exercitationem ipsam amet obcaecati doloribus ut cumque corporis corrupti minus, nam explicabo quia! Pariatur?</p>
+        <p>Blanditiis perspiciatis reprehenderit, dolores placeat quo esse. Vitae perferendis eos placeat rerum fugit consequuntur, cumque est architecto voluptatem explicabo, optio, iste mollitia quam doloremque ab in eum officiis rem dolorem.</p>
+    </div>
+    <p>
+        E se eu quissesse que um dado elemento ignorasse a flutuação de outro e seguisse o curso natural de elementos da página?
+    </p>
+    <p>
+        Devo usar: <text class="destaque">"clear: both"</text>
+    </p>
+    <h4>Veja</h4>
+    <div class="ex_float_fundo">
+        <img src="../../img/cidade.jpg">
+        <h2>Título</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptas accusamus, officiis similique iusto tempora doloribus tempore hic, enim, modi quibusdam illo. Asperiores veniam ullam nobis maxime amet quaerat harum?</p>
+        <p>Explicabo, ducimus molestias natus in eligendi atque, labore repudiandae libero vero eius dolor amet, animi inventore fugiat ab nisi voluptatum facere repellendus rerum velit reiciendis officiis quasi voluptates ad! Quo.</p>
+        <p>Quod unde harum, repellendus illo quaerat quam iusto quasi minus incidunt. Accusamus exercitationem fugit mollitia, necessitatibus aliquid laboriosam aliquam architecto ea. Fuga dignissimos tenetur eaque minima. Aliquid natus pariatur officiis!</p>
+        <p>Illo libero assumenda sint quasi harum beatae esse, asperiores eveniet cumque fugit odio possimus expedita eius at veritatis? Perferendis illo quas voluptatum a perspiciatis harum commodi. In dicta alias magnam.</p>
+        <p style="clear:both">Illo itaque nemo alias consequatur quia odit reprehenderit, est voluptates qui nesciunt soluta dolor labore corrupti dolorum consequuntur! Cumque exercitationem necessitatibus perspiciatis tenetur, neque eveniet minus sint quos! Id, harum.</p>
+        <p>Harum impedit debitis ducimus nemo et dolores doloremque esse, autem recusandae, eligendi iusto deserunt cupiditate dicta exercitationem ipsam amet obcaecati doloribus ut cumque corporis corrupti minus, nam explicabo quia! Pariatur?</p>
+        <p>Blanditiis perspiciatis reprehenderit, dolores placeat quo esse. Vitae perferendis eos placeat rerum fugit consequuntur, cumque est architecto voluptatem explicabo, optio, iste mollitia quam doloremque ab in eum officiis rem dolorem.</p>
+    </div>
+    <p>
+        Note que no arquivo html coloquei um style no quinto parágrafo que "limpa" a flutuação
+    </p>
+    <h3>Modificações de menús</h3>
+    <p>
+        Situação em que tenho um conjunto de elementos no menu, mas quero colocar um elemento específico em uma parte do menú
+    </p>
+    <p>
+        Isso acontece muito com o login que geralmente fica na extrema direita do menú
+    </p>
+    <h4>Veja</h4>
+    <div class="ex_float_menu">
+        <ul>
+            <li>Canal 1</li>
+            <li>Canal 2</li>
+            <li>Canal 3</li>
+            <li class="ex_float_login">Login</li>
+        </ul>
+    </div>
+
+
+
+    <hr><br>
+    <a href="./propriedades.html">Voltar à central de propriedades</a>
+</body>
+</html>

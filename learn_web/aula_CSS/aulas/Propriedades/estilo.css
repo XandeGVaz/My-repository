@@ -1,0 +1,500 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kalnia+Glaze:wght@100..700&display=swap');
+
+
+/*Estilização geral: feita com *{} */
+*{ 
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+/*Estilização por tag*/
+body{
+    background: rgb(206, 237, 238);
+}
+
+
+h1,h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+h3,h4{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(187, 187, 6);
+}
+
+
+/*Estilização por classe*/
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.destaque{
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    margin:0%;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*Estilização por id*/
+#title{
+    text-align: center;
+    color:rgba(13, 16, 214, 0.932);
+}
+
+
+/* Propriedade Background*/
+#ex_back_1{
+    width:100%;
+    height:300px;
+    background-color:gray;
+    background-image: url(../../img/cidade.jpg);
+    background-size: cover; /*Adequa imagem à página (semelhante a 100%)*/
+    background-repeat: no-repeat;
+    background-position:center; /*Adequa a imagem a partir do centro*/
+}
+
+#tback_1{
+    text-align: center;
+}
+
+
+/*Propriedade Border*/
+#ex_border_1{
+    text-align: center;
+    background-color:black;
+    color:white;
+    border: 10px ridge white;
+    border-radius: 30px;
+}
+
+
+/*Propriedade Margin*/
+.espaced{
+    margin-bottom:50px;
+}
+
+
+/*Propriedade Padding*/
+.botao{
+    background:rgb(22, 196, 94);
+    margin-left: 40%;
+    margin-right: 30%;
+    padding: 2% 0.1% 1% 0.1%;
+    border: 5px solid rgb(16, 180, 85);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+
+}
+.botao:hover{
+    background-color: blue;
+    border: 5px solid rgb(19, 22, 189);
+}
+
+
+/*Propriedades Width e Height*/
+#ex_width_height{
+    width:1160px;
+    height:100px;
+    background-color:rgb(48, 201, 206);
+}
+
+#ex_max-width{
+    max-width:1500px;
+    height:100px;
+    background-color:rgb(48, 201, 206);
+}
+
+
+/*Propriedade Font*/
+.ex_font_1{
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-size:20px;
+    font-style:normal;
+    font-weight: 500;
+}
+
+
+/*Propriedade Display*/
+.ex_display_1{
+    font-weight: bold;
+    display:block;
+    border: 5px double rgb(5, 5, 5);
+}
+.back_gray{
+    background-color: gray;
+}
+.back_white{
+    background-color: white;
+}
+
+.ex_display_2{
+    display:inline;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.ex_display_3{
+    text-align: center;
+    color:white;
+    font-weight:bold;
+    border: 1px solid  rgb(206, 237, 238);
+    display:inline-block;
+    background-color:rgb(23, 116, 116);
+    padding:15px;
+    margin-left: 0%;
+    margin-right: 0%;
+    width:30%;
+}
+.ex_display_3:hover{
+
+    color: black;
+    background-color:rgb(247, 247, 247);
+   
+}
+
+.ex_display_4{
+    display:none;
+}
+.oculto{
+    visibility: hidden;
+}
+
+
+/*Propriedade Position*/
+.bloco{
+    background-color: blue;
+    width: 1000px;
+    height: 300px;
+}
+
+.conteudo_static{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin:0% /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+}
+.conteudo_static:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);;
+}
+
+.conteudo_relative_1{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+
+}
+.conteudo_relative_1:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);;
+}
+.conteudo_relative_2{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: relative;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+
+}
+.conteudo_relative_2:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);;
+}
+.conteudo_relative_3{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: relative;
+    top: 150px;
+    left: 300px;
+    z-index: 3;
+
+}
+.conteudo_relative_3:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);;
+}
+.conteudo_relative_abaixo{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: rgb(209, 33, 33);
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: relative;
+    top: 70px;
+    left: 0px;
+    z-index: 0;
+
+}
+.conteudo_relative_abaixo:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);;
+}
+
+.conteudo_fixed{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    border: 5px solid white;
+    padding: 20px 50px 15px 50px;
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+    
+    position:fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.conteudo_fixed:hover{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(33, 36, 223);
+    padding: 30px 70px 20px 70px;
+
+}
+
+.conteudo_absolute_1{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+
+}
+.conteudo_absolute_1:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);;
+}
+.conteudo_absolute_2{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: rgb(46, 45, 45);
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+
+}
+.conteudo_absolute_2:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);;
+}
+.bloco_relative{
+    position: relative;
+    background-color: blue;
+    width: 1000px;
+    height: 300px;
+}
+
+.conteudo_sticky_1{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: sticky;
+    bottom: 0px;
+}
+.conteudo_sticky_1:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);
+}
+
+.conteudo_sticky_2{
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    margin: 0%; /*Necessário pois definimos por padrão todos os elementos com 3.3% de margem*/
+
+    position: sticky;
+    top: 0%;
+}
+.conteudo_sticky_2:hover{
+    color: white;
+    background-color: rgb(23, 116, 116);
+}
+
+.ex_fundo{
+    position: relative;
+    text-align: center;
+
+    background-image: url(../../img/cidade.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 400px;
+
+    opacity: 50%;
+    border: 3px dashed blue;
+}
+.ex_fundo:hover{
+    border: none;
+    opacity: 100%;
+    font-weight: bold;
+}
+
+.ex_conteudo{
+    margin:0%;
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+
+/*Propriedade Overflow*/
+.overflow_visible{
+    background-color: rgb(97, 97, 209);
+    width: 1000px;
+    height: 200px;
+    color: black;
+    font-weight: bold;
+}
+
+.overflow_hidden{
+    background-color: rgb(97, 97, 209);
+    width: 1000px;
+    height: 200px;
+    color: black;
+    font-weight: bold;
+
+    overflow: hidden;
+}
+
+.overflow_scroll{
+    background-color: rgb(97, 97, 209);
+    width: 1000px;
+    height: 200px;
+    color: black;
+    font-weight: bold;
+
+    overflow: scroll;
+}
+
+.overflow_auto{
+    background-color: rgb(97, 97, 209);
+    width: 1000px;
+    height: 200px;
+    color: black;
+    font-weight: bold;
+
+    overflow: auto;
+}
+
+
+/*Propriedade Float*/
+.ex_float_fundo{
+    overflow: auto;
+    background-color: white;
+    border: 3px solid black;
+}
+.ex_float_fundo img{
+    float: right;
+    width: 50%;
+    height: 50%;
+    margin-right: 0%;
+    margin-left: 3.3%;
+    margin-bottom: 1%;
+}
+
+.ex_float_menu ul{
+    overflow: hidden;
+    background-color: black;
+    border: 5px solid white;
+    margin: 0%;
+    padding:  0%;
+}
+.ex_float_menu li{
+    display: inline-block;
+    color: white;
+    padding: 30px 40px 15px 40px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0%; /*Necessário para tirar efeito geral*/
+}
+.ex_float_menu li:hover{
+    background-color: gray;
+
+}
+.ex_float_login{
+    background-color: orange;
+    color: black;
+    float: right;
+}
+
+
+/*Propriedade Opacity*/
+.img1:hover{
+    opacity: 0.9;
+}
+.img2:hover{
+    opacity: 0.5;
+}
+.img3:hover{
+    opacity: 0.2;
+}

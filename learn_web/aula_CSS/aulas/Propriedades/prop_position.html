@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Position</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1>Propriedade Position</h1>
+
+    <h2>Tipos</h2>
+    <h3>Position:</h3>
+    <p>
+        <ul>
+            <li>Static</li>
+            <li>Relative</li>
+            <li>Fixed</li>
+            <li>Absolute</li>
+            <li>Sticky</li>
+        </ul>
+    </p>
+    <p>
+        <a class="destaque" href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">FUNCIONAMENTO DETALHADO DO POSITION AQUI!</a>
+    </p>
+
+    <h2>Static</h2>
+    <p>
+        Padrão das divs
+    </p>
+    <p>
+        Posição fixa, só permitindo a mudança de posição utilizando margem<br>
+        O que não é precisamente uma mudança de posição do elemento, já que dificulta a mudança de posição de um elemento específico da div
+    </p>
+    <h3>Exemplos</h3>
+    <h4>Padrão (margem de 0%)</h4>
+    <div class="bloco">
+        <p class="conteudo_static">Conteúdo</p>
+        <p class="conteudo_static">Conteúdo</p>
+        <p class="conteudo_static">Conteúdo</p>
+    </div>
+    <br>
+    <h4>Margem de topo de 100 pixels</h4>
+    <div class="bloco">
+        <p class="conteudo_static" style="margin-top: 100px;">Conteúdo</p>
+        <p class="conteudo_static">Conteúdo</p>
+        <p class="conteudo_static">Conteúdo</p>
+    </div>
+
+    <h2>Relative</h2>
+    <p>
+        Permite a mudança da posição do elemento na div em relação a sua posição original
+    </p>
+    <p>
+        Funciona da seguinte maneira (após colocar "position:relative"): <text class="destaque"> "--posição--": distância</text>
+    </p>
+    <p>
+        E assim o elemento terá uma determinada distância de determinada parte da sua posição original<br>
+        (top, right, left ou bottom)
+    </p>
+    <h3>Exemplo</h3>
+    <div class="bloco">
+        <p class="conteudo_relative_1">Conteúdo</p>
+        <p class="conteudo_relative_2">Conteúdo</p>
+        <p class="conteudo_relative_3">Conteúdo</p>
+    </div>
+    <p>
+        Também libera o uso da atribuição "z-index" que permite determinar a profundidade dos elementos (qual fica na frente e qual fica atrás), formando planos de conteúdo
+    </p>
+    <h3>Exemplo</h3>
+    <div class="bloco">
+        <p class="conteudo_relative_1">Conteúdo</p>
+        <p class="conteudo_relative_abaixo">Conteúdo</p>
+    </div>
+
+    <h2>Fixed</h2>
+    <p>
+        Permite a existência de um elemento fixo em uma posição da tela (mesmo após rolagem)
+    </p>
+    <h3>Exemplo</h3>
+    <p>
+        Descomente a div deste exemplo
+    </p>
+    <div class="conteudo_fixed">
+        <p>ZAP</p>
+    </div>
+
+    <h2>Absolute</h2>
+    <p>
+        Diz a respeito da posição do elemento em relação ao "pai" , ou seja, seu ancestral o qual pode ser uma div ou outro elemento
+    </p>
+    <p>
+        As distância em porcentatem da posição original do conteúdo será dada em relação ao tamanho do "pai/ancestral"
+    </p>
+    <p>
+        Para que funcione: <text class="destaque">A POSIÇÃO DO PAI NÃO PODE SER ESTÁTICA</text>
+    </p>
+    <h3>Exemplo</h3>
+    <div class="bloco_relative">
+        <p class="conteudo_absolute_1">Conteúdo</p>
+        <p class="conteudo_absolute_2">Conteúdo</p>
+    </div>
+    <br>
+    <h3>Resumo</h3>
+    <p>
+        Nesse caso, o elemento sempre será afastado do canto superior esquerdo da div
+    </p>
+    <p>
+        É como se os elementos dessa div fossem absolutos (se ignorassem)
+    </p>
+
+    <h2>Sticky</h2>
+    <p>
+        Conteúdo, coma rolagem da página, possue deslocamento pegajoso na tag "ancestral/pai"
+    </p>
+    <h3>Exemplo</h3>
+    <div class="bloco">
+        <p class="conteudo_sticky_1">Conteúdo</p>
+        <p class="conteudo_sticky_2">Conteúdo</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolores, sint eum molestias repellat fuga nesciunt autem culpa maiores aliquam pariatur quas numquam. Minima laborum aperiam quo voluptatum, delectus dignissimos.</p>
+    <p>Delectus corporis consequatur, rerum ea cumque placeat quisquam porro id, vero, cupiditate sequi vitae dolorem. Sed omnis quasi ipsum fugiat reprehenderit officia, temporibus nostrum? Earum officiis numquam accusamus voluptatibus dolores.</p>
+    <p>Atque fugit facilis dicta aut voluptatibus tempora enim ab debitis sapiente! Praesentium voluptatibus fuga voluptas mollitia. Vitae ipsum voluptas ullam, quia necessitatibus est, fuga dicta explicabo eius obcaecati quidem incidunt.</p>
+    <p>Adipisci commodi magnam ab totam, pariatur impedit aliquam temporibus aperiam incidunt, excepturi inventore. Nostrum, autem doloremque accusamus repudiandae nam soluta et voluptatibus dolorem libero. Architecto quasi beatae porro reprehenderit aliquam.</p>
+    <p>Natus soluta ducimus similique dignissimos, alias quas inventore eveniet ipsum omnis eius obcaecati atque repellat eum labore recusandae aliquam! Facere vitae totam rerum reprehenderit illo reiciendis nihil recusandae assumenda delectus.</p>
+    <p>Aliquid necessitatibus animi quam aspernatur, fugit repellendus ipsa dicta fuga qui veritatis, neque eius, saepe placeat velit aut explicabo debitis quis. Ipsam ratione quaerat natus nesciunt quasi. Iste, similique repellendus.</p>
+    <p>Incidunt modi harum rerum odio velit ullam animi ducimus saepe ea quia quasi fugiat excepturi, consectetur vitae beatae alias aliquid dicta suscipit tempora ad obcaecati in facere. Quasi, ut nemo!</p>
+    <p>Odit nobis doloribus molestiae ipsam enim corrupti nostrum recusandae similique expedita nesciunt sapiente unde perspiciatis vel eum illo repudiandae necessitatibus dicta nulla neque, porro quam rerum sunt illum ducimus? Voluptatum?</p>
+    <p>Dolorem, commodi. Ducimus itaque sint harum illo dolorum quibusdam. Iste, qui, adipisci doloribus reprehenderit soluta dolorum eveniet, natus quisquam odio molestias omnis. Magni debitis doloribus quas esse ullam blanditiis unde.</p>
+    <p>Ipsam ut ratione quos, odio quod minus consectetur exercitationem perferendis veritatis eaque quibusdam minima officiis beatae eum, ipsa quo odit blanditiis unde nobis incidunt. Eligendi consequuntur impedit eveniet unde harum!</p>
+    <p>Aperiam voluptatem ea, magni laboriosam laudantium recusandae culpa eaque quia aspernatur deleniti iusto. Pariatur velit perferendis accusamus modi deserunt excepturi molestias dicta magni doloremque dolorem at itaque, dignissimos assumenda quam.</p>
+    <p>Numquam quisquam deleniti dolorem fugit error, non eius minima tempore saepe molestiae sapiente temporibus assumenda quaerat iure cupiditate itaque dolores facere sunt? Illo minima cumque ratione ex quod, nesciunt ipsa?</p>
+
+    <h2>Exercício: faça um cartão</h2>
+
+    <div class="ex_fundo">
+        <p class="ex_conteudo">Conteúdo</p>
+    </div>
+
+
+
+    <hr><br>
+    <a href="./propriedades.html">Voltar à central de propriedades</a>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/*Estilização geral: feita com *{} */
+*{ 
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*Estilização por tag*/
+body{
+    background: rgb(206, 237, 238);
+}
+
+ul{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h1,h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+
+/*Estilização por classe*/
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.destaque{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*Estilização por id*/
+#title{
+    text-align: center;
+    color:blue;
+}

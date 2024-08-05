@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Dropdown</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1 id="title">Efeito Dropdown</h1>
+
+    <p>
+        Usado para criar uma série de opções abaixo de uma opção
+    </p>
+    <p>
+        Pode ser feito com Java Script, mas é possível realizá-lo somente usando css
+    </p>
+    <p class="center">
+        <text class="destaque">Olhar aquivo CSS dessa aula</text>
+    </p>
+    <h2>Exemplo: dropdown simples</h2>
+    <h3>Veja</h3>
+    <ul class="menu">
+        <li class="chanel"><a href="#">Canal 1</a></li>
+        <li class="chanel"><a href="#">Canal 2</a></li>
+        <li class="dropdown">
+            <a class="dropbtn" href="#">Dropdown</a>
+            <div class="dropdown_content">
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+            </div>
+        </li>
+        <li class="login"><a href="#">Login</a></li>
+    </ul>
+
+    <h2>Exemplo: dropdown duplo</h2>
+    <h3>Veja</h3>
+    <ul class="menu">
+        <li class="chanel"><a href="#">Canal 1</a></li>
+        <li class="chanel"><a href="#">Canal 2</a></li>
+        <li class="dropdown">
+            <a class="dropbtn" href="#">Dropdown</a>
+            <div class="dropdown_content">
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+                <div class="sdropdown">
+                    <a class="sdropbtn" href="#">Item -</a>
+                    <div class="sdropdown_content">
+                        <a href="#">Item</a>
+                        <a href="#">Item</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="login"><a href="#">Login</a></li>
+    </ul>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr style="clear: both;"><br>
+    <a href="../../index.html">Voltar à página principal</a>
+</body>
+</html>

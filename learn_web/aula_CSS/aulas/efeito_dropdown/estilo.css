@@ -1,0 +1,182 @@
+/*Estilização geral: feita com *{} */
+
+/*Estilização por tag*/
+body{
+    background: rgb(206, 237, 238);
+}
+
+
+h1,h2{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+h3,h4{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(187, 187, 6);
+}
+
+h1,h2,h3,h4,h5,p,hr{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+/*Estilização por classe*/
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.destaque{
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    margin:0%;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*Estilização por id*/
+#title{
+    text-align:center;
+    color: rgb(3, 68, 13);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: rgb(111, 224, 177);
+    border: 10px ridge white;
+    border-radius: 5px;
+}
+
+/*Menú*/
+
+/* ul.menu{
+    overflow: hidden;
+    background-color: black;
+    margin-left: 3.3%;
+    padding: 0%;
+}
+ul.menu li{
+    display:inline-block;
+    padding: 30px 30px 10px 30px;
+    margin:0%;
+}
+ul.menu li:hover{
+    background-color: gray;
+}
+ul.menu li a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 30px 10px 30px;
+
+}
+li.login{
+    background-color: orange;
+    float: right;
+}
+li.login a{
+    color: black;
+} */
+
+/*Menú*/
+ul.menu{
+    overflow: hidden;
+    background-color: black;
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    padding: 0%;
+    border: 3px solid white;
+}
+li.chanel{
+    float: left;
+    margin:0%;
+    list-style-type: none;
+}
+li.chanel a:hover, li.login a:hover{
+    background-color: gray;
+}
+li.chanel a, a.dropbtn{
+    display: inline-block;
+    margin: 0%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 30px;
+
+}
+li.login{
+    margin:0%;
+    padding: 0%;
+    float: right;
+}
+li.login a{
+    display: inline-block;
+    margin: 0%;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 30px;
+    background-color: orange;
+}
+
+/*Dropdown do menú*/
+li.dropdown{
+    display: inline-block;
+}
+li.dropdown:hover a.dropbtn{ /*Quando estivermos em cima do dropdown (lista) o background do backbtn mudará de cor*/
+    background-color: gray;
+}
+.dropdown_content{
+    position: absolute;
+    width: 132px; /*Limitação de largura para que elementos fiquem na vertical*/
+    background-color: black;
+    border: 3px solid white;
+    display: none;
+}
+li.dropdown:hover .dropdown_content{ /*Eu só posso fazer condição de uma filha com uma tag ancestral*/
+    display: block; /*para aparecer do lado direito do dropbtn: "display: inline-block"*/
+}
+.dropdown_content a{
+    display: block; /*Use block em vez de inline block para que seja possível mudar posição dos textos com text align*/
+    color: white;
+    text-decoration: none;
+    text-align: center; 
+    font-weight: bold;
+    padding: 20px 30px;
+}
+.dropdown_content a:hover{
+    background-color: gray;
+}
+
+/*Segundo Dropdown*/
+a.sdropbtn{
+    display: inline-block;
+}
+.sdropdown:hover a.sdropbtn{ /*Quando estivermos em cima do sdropdown (lista) o background do sbackbtn mudará de cor*/
+    background-color: #808080;
+}
+.sdropdown_content{
+    position: absolute;
+    width: 132px; /*Limitação de largura para que elementos fiquem na vertical*/
+    background-color: black;
+    border: 3px solid white;
+    display: none;
+}
+.sdropdown:hover .sdropdown_content{ /*Eu só posso fazer condição de uma filha com uma tag ancestral*/
+    display: inline-block;
+}
+.sdropdown_content a:hover{
+    background-color: gray;
+}

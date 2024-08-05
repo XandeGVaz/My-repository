@@ -1,0 +1,97 @@
+/*Estilização geral: feita com *{} */
+*{ 
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+/*Estilização por tag*/
+body{
+    background: rgb(206, 237, 238);
+}
+
+
+h1,h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+#title{
+    text-align:center;
+    color: rgb(3, 68, 13);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: rgb(111, 224, 177);
+    border: 10px ridge white;
+    border-radius: 5px;
+}
+
+.center{
+    text-align:center;
+}
+
+.destaque{
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    margin:0%;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+/*Estilização de links*/
+
+a.botao1{ /*Classe somente será válida para links*/
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: greenyellow;
+    border: 5px solid green;
+    border-radius: 2px;
+    padding: 10px 15px 5px 15px;
+}
+a.botao1:hover{ /*Classe somente será válida para links*/
+    font-weight: bold;
+    color: white;
+    background-color: rgb(47, 50, 255);
+    border: 5px solid rgb(20, 220, 235);
+    border-radius: 2px;
+    padding: 20px 30px 10px 30px;
+}
+
+a.botao2{
+    text-align: center;
+    text-decoration: none;
+    color:blue;
+    border: 5px double blue;
+    border-radius: 2px;
+    padding: 10px 15px 5px 15px;
+}
+a.botao2:hover{
+    color: white;
+    border: none;
+    background-color: black;
+}
+
+a.botao3{
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 30px;
+}
+a.botao3:hover{
+    text-decoration: underline red 5px;
+}
+
+a.botao4{
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 20px;
+}
+a.botao4:hover{
+    cursor:zoom-in;
+}

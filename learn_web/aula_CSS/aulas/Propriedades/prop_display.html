@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Display</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1>Propriedade Display</h1>
+    <p>
+        Responsável por ditar como o elemento aparece e se comporta na tela
+    </p>
+    <p>
+        <a class="destaque" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/display" target="_blank">FUNCIONAMENTO DETALHADO DO DISPLAY AQUI!</a>
+    </p>
+
+    <h2>display:</h2>
+    <p>
+        <ul>
+            <li>block</li>
+            <li>inline</li>
+            <li>inline-block</li>
+            <li>flex</li>
+        </ul>
+    </p>
+
+    <h2>display: block</h2>
+    <p>
+        Permite configurações de:<br>
+        <ul>
+            <li>width</li>
+            <li>height</li>
+            <li>margin</li>
+        </ul>
+    </p>
+    <p>
+        Elementos em bloco pulam linha (tem um espaço horizontal só para eles)
+    </p>
+    <p>
+        Parágrafos, títulos e elementos de uma lista já vem por padrão com display em bloco
+    </p>
+    <h3>Exemplo:</h3>
+    <ul class="ex_display_1 back_gray">
+        <li class="ex_display_1 back_white">Item 1</li>
+        <li class="ex_display_1 back_white">Item 2</li>
+        <li class="ex_display_1 back_white">Item 3</li>
+    </ul>
+
+    <h2>display: inline</h2>
+    <p>
+        Sem as configurações de tamanho altura e margem
+    </p>
+    <p>
+        Cada elemento do display em linha se comporta como uma palavra<br>
+        Consequentemente só terão espaços entre eles se existir um espaço ou quebra de linha no código
+    </p>
+    <p>
+        Span, e links já vem por padrão com display em linha
+    </p>
+    <h3>Exemplo:</h3>
+    <p>
+        <ul>
+            <li class="ex_display_2">Item 1</li>
+            <li class="ex_display_2">Item 2</li>
+            <li class="ex_display_2">Item 3</li>
+        </ul>
+    </p>
+
+    <h2>display: inline-block</h2>
+    <p>
+        Elementos aparecem em linha, mas cada um funciona como um bloco
+    </p>
+    <p>
+        Então, cada elemento alinhado permite a configuração de:<br>
+        <ul>
+            <li>width</li>
+            <li>height</li>
+            <li>margin</li>
+        </ul>
+    </p>
+    <h3>Exemplo:</h3>
+    <ul>
+        <li class="ex_display_3">Item 1</li><li class="ex_display_3">Item 2</li><li class="ex_display_3">Item 3</li>
+    </ul>
+
+    <h2>display: none</h2>
+    <p>
+        Permite cancelar a aparição de um elemento
+    </p>
+    <p>
+        Nesse caso os outros aparecem como se ele não existisse
+    </p>
+    <h3>Exemplo:</h3>
+    <ul>
+        <li class="ex_display_3">Item 1</li><li class="ex_display_3 ex_display_4">Item 2</li><li class="ex_display_3">Item 3</li>
+    </ul>
+    <h3>E se eu só quiser ocultar um elemento?</h3>
+    <p>
+        <text class="destaque">"visibility:hidden"</text><br>
+    </p>
+    <h3>Veja:</h3>
+    <ul>
+        <li class="ex_display_3">Item 1</li><li class="ex_display_3 oculto">Item 2</li><li class="ex_display_3">Item 3</li>
+    </ul>
+
+
+
+    <h2>display: flex</h2>
+    <p>
+        Haverá uma aula só para ele
+    </p>
+
+    <hr><br>
+    <a href="./propriedades.html">Voltar à central de propriedades</a>
+</body>
+</html>

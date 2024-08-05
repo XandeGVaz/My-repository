@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de vídeo em HTML</title>
+
+    <!--Meta tags adicionais-->
+    <meta name="description" content="Aula de vídeo em HTML"> <!--Descrição do site (aparece abaixo do link)-->
+    <meta name="keywords" content="vídeos HTML, vídeo, HTML, html"> <!--Palavras chaves para que os navegadores ranqueiem sobre o que o site se trata (hoje em dia não faz tanta diferença devido à IA)-->
+    <meta name="author" content="Vitor Alexandre"> <!--espécie de assinatura da página-->
+</head>
+<body style="background:rgb(222, 226, 157)">
+    <h1><a href="https://www.flaticon.com/br/icones-gratis/video" title="vídeo ícones" target="_blank"><img src="../Imagens/video_icon.png" width="30"></a>Aula Vídeo</h1>
+
+    <h2>Exemplo de vídeo</h2>
+    <h3>Troll face</h3>
+    <video width="100%" controls>
+        <source src="../video/17615dd8.mp4" type="video/mp4">
+    </video>
+
+    <h3>Troll face com tumbrl mail</h3>
+    <video poster="../Imagens/troll_face.jpg" width="100%" controls>
+        <source src="../video/17615dd8.mp4" type="video/mp4">
+    </video>
+
+    <!-- <h3>Troll face que toca ao entrar na página</h3>
+    <video autoplay width="100%" controls>
+        <source src="../video/17615dd8.mp4" type="video/mp4">
+    </video> -->
+
+    <h3>Troll face sem opções de download, de tela cheia e de picture in picture</h3>
+    <video width="100%" controls controlsList="nodownload nofullscreen" disablepictureinpicture>
+        <source src="../video/17615dd8.mp4" type="video/mp4">
+    </video>
+    
+
+    <hr><br>
+    
+    <a href="../index.html">Voltar à página principal</a>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 1</title>
+    <meta name="author" content="Vitor Alexandre"> <!--espécie de assinatura da página-->
+</head>
+<body style="background:rgb(172, 227, 248)">
+    <h1>Formulário:</h1>
+
+    <h2>Dados pessoais</h2>
+
+    <form>
+        <!--Nome-->
+        <label for="campo_nome">Nome:</label>
+        <input id="campo_nome" type="text" placeholder="Digite seu nome aqui" required>
+
+        <br><br>
+
+        <!--Email-->
+        <label for="campo_email">Email:</label>
+        <input id="campo_email" type="email" placeholder="Digite seu email aqui" required>
+
+        <br><br>
+
+        <!--Senha-->
+        <label for="campo_senha">Senha:</label>
+        <input id="campo_senha" type="password" placeholder="Digite sua senha aqui" required>
+
+        <br><br>
+
+        <h2>Linguagem preferida</h2>
+
+        <!--Usando tipo radio (única escolha)-->
+        <input id="c" type="radio" name="linguagem_p" value="c">
+        <label for="c">C</label><br><br>
+
+        <input id="python" type="radio" name="linguagem_p" value="python">
+        <label for="python">Python</label><br><br>
+
+        <input id="java" type="radio" name="linguagem_p" value="java">
+        <label for="java">Java</label>
+
+        <br><br>
+
+        <h2>Linguagens usadas</h2>
+
+        <input id="c_" type="checkbox" name="linguagem_1" value="c_">
+        <label for="c_">C</label><br><br>
+
+        <input id="python_" type="checkbox" name="linguagem_2" value="python_">
+        <label for="python_">Python</label><br><br>
+
+        <input id="java_" type="checkbox" name="linguagem_3" value="java_">
+        <label for="java_">Java</label>
+
+        <br><br>
+
+        <!--Campo de seleção (não é mais input)-->
+        <h2>Melhor horário de rendimento</h2>
+        <select name="horários">
+            <option selected disabled value="">Selecione um horário</option>
+            <option value="manhã">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+            <option value="madrugada">Madrugada</option>
+        </select>
+
+        <br><br>
+
+        <h2>Sua rotina:</h2>
+        <textarea name="rotina" placeholder="Fale sobre sua rotina aqui" rows="15" cols="50"></textarea>
+
+        <br><br>
+
+        <h2>Clique</h2>
+        <button>Clique aqui</button>
+
+        <br><br>
+
+        <!--Campo de input do type submit (utilizado para enviar o formulário)-->
+        <input type="submit" value="Enviar">
+
+    </form>
+
+
+
+    <hr><br>
+
+    <h2>Observações em "Dados pesssoais":</h2>
+    <p>
+        1-Legenda com "for" e input com "id" permitem que ao clicar na legenda o campo de escrita tambéms seja ativado.<br>
+        2-Operador "required" indica que o campo é obrigatório e o usuário não pode enviar o formulário sem prenchê-lo.<br>
+        3-Veremos como indicar o arquivo para o qual as informações do formulário preenchido serão enviadas nas aulas de back-end, porém essas informações são indicadas geralmente dentro da tag "form".<br>
+        4-Para deixar a marca de água que indica onde o usuário deve escrever algo usamos o operador " required="escreva ___ aqui" ".
+    </p>
+
+    <h2>Observações em "Linguagem preferida":</h2>
+    <p>
+        1-Para que a única escolha funcione, é necessário que todos os inputs tenham "type" radio e tenham o mesmo atributo "name".<br>
+        2-O value é importante pois ele determina o valor que será enviado para o arquivo de resposta do formulário.
+    </p>
+
+    <h2>Observações em "Linguagens usadas":</h2>
+    <p>
+         1-Para que a múltipla escolha funcione, é necessário que todos os inputs tenham "type" checkbox e tenham atribustos "name" diferentes
+    </p>
+
+    <h2>Observações em "Melhor horário de rendimento":</h2>
+    <p>
+         1-Nesse caso não utilizamos a tag "input", mas sim a tag "select".<br>
+         2-Podemos colocar uma seleção desabilitada que informa o usuário a necessidade de selecionar uma opção válida (observar a primeira opção).<br>
+         3-O select tem que ter "name" para indicar o que será enviado para o arquivo no back-end.
+    </p>
+
+    <h2>Observações em "Sua rotina"</h2>
+    <p>
+        1-Assim como o input e o select, precisa de um atributo name.<br>
+        2-Pode ser dimensionado usando os operadores "rows" e "cols".
+    </p>
+
+    <h2>Observações em "Clique"</h2>
+    <p>
+        1-Cria um botão genérico.<br>
+        2-Se esse botão for colocado dentro do formulário, ele terá a mesma função de enviar o formulário, caso o contrário ele continuará genérico.
+        
+    </p>
+
+    <hr><br>
+    <a href="../Aulas/aula_formularios.html">Voltar à página de aula de formulárioss</a><br>
+    <a href="../index.html">Voltar à página principal</a>
+</body>
+</html>
