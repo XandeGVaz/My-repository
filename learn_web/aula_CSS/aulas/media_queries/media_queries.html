@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1 id="title">Media Queries</h1>
+
+    <h2>Qual a função</h2>
+    <p>
+        Media queries permitem fazer mudanças na página dependentes do tamanho de tela do usuário
+    </p>
+    <p>
+        Consequentemente, diferentes dispositivos possuirão diferentes visualizações do site
+    </p>
+    <h3>
+        <text class="destaque">GRANDE IMPORTÂNCIA:</text> permite portabilidade da página para diferentes dispositivos
+    </h3>
+
+    <h2>Como definir um Media Querie?</h2>
+    <p class="codigo">
+        <text class="destaque">@media only screen and (max-width:--tamanho máximo da tela--) and (min-width:--tamanho mínimo da tela--)</text>{<br>
+            <text style="margin-left: 20%;">(comportamento desejado para essa faixa de tamano)</text><br>
+        }
+    </p>
+
+    <h2>IMPORTANTE</h2>
+    <h3><u>PADRÃO DE MEDIA QUERIES PARA DIFERENTES DISPOSITIVOS:</u></h3>
+    <p class="codigo">
+        <text>/*Smartphones (600px para baixo)*/</text><br>
+        <text class="destaque">@media only screen and (max-width: 600px) {...}</text>
+    </p>
+    <p class="codigo">
+        <text>/*Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima)*/</text><br>
+        <text class="destaque">@media only screen and (min-width: 600px) {...}</text>
+    </p>
+    <p class="codigo">
+        <text>/*Dispostivos Médios (Tablets deitados, 768px para cima)*/</text><br>
+        <text class="destaque">@media only screen and (min-width: 768px) {...}</text>
+    </p>
+    <p class="codigo">
+        <text>/*Dispostivos Largos (laptops/desktops, 992px para cima)*/</text><br>
+        <text class="destaque">@media only screen and (min-width: 992px) {...}</text>
+    </p>
+    <p class="codigo">
+        <text>/*Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima)*/</text><br>
+        <text class="destaque">@media only screen and (min-width: 1200px) {...}</text>
+    </p>
+
+    <h3>Exemplo de uso (mude tamanho da página):</h3>
+    <div class="bloco"></div>
+    <p>
+        Também é muito comum utilizar o "display: none;" para ocultar elementos que não deveriam aparecer em um dado tipo de dispositivo, mas em outro sim
+    </p>
+    <br><br><br><br><br>
+
+    <hr><br>
+    <p>
+        <a href="../../index.html">Voltar à página principal</a>
+    </p>
+
+</body>
+</html>

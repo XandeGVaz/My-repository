@@ -1,0 +1,94 @@
+/*Estilização por tag*/
+body{
+    background: rgb(206, 237, 238);
+}
+
+
+h1,h2{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+h3,h4{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(187, 187, 6);
+}
+
+h1,h2,h3,h4,h5,p,hr,ul,ol{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+/*Estilização por classe*/
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.destaque{
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    margin:0%;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*Estilização por id*/
+#title{
+    text-align:center;
+    color: rgb(3, 68, 13);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: rgb(111, 224, 177);
+    border: 10px ridge white;
+    border-radius: 5px;
+}
+
+
+/*Card*/
+.card{
+    width: 40%;
+    margin: 0%;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.card img{
+    margin: 0%;
+    max-width: 100%;
+}
+
+
+/*Card reduzido*/
+.redz_card{
+    width: 40%;
+    margin: 0%;
+    height: auto; /*Tamanho da div do card se adequa à quantidade de conteúdo dentro*/
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.redz_card img{
+    margin: 0%;
+    max-width: 100%;
+}
+.reduzido{
+    white-space: nowrap; /*Coloca todo o texto de uma tag com essa classe em uma linha*/
+    text-overflow: ellipsis; /*Coloca 3 pontos de continuação (...) quando texto acaba */
+    /*Para que dê certo, essa propriedade tem que ser aplicada junto com overflow: hidden*/
+    overflow: hidden;
+    padding: 5px 10px 30px 10px;
+}
+
+.redz_card:hover .reduzido{
+    white-space: normal;
+}
