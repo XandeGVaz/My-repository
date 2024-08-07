@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1 id="title">Flexbox</h1>
+    <p>
+        Maneira mais atual de organizar conteúdos em divs (principalmente menus) sem utilizar:
+        <ul>
+            <li>Display: inline-block</li>
+            <li>Float: left</li>
+        </ul>
+    </p>
+    <p>
+        A flexbox facilita tratar a disposição dos elementos em dispositivos de tamanhos de telas diferentes, sem ter que mudar a estrutura dos códigos totalmente para diferentes media queries
+    </p>
+
+    <h2>Código de uma flexbox:</h2>
+    <h3>.flexpai :</h3>
+    <div class="codigo">
+        <p>
+            <b>/*Principal:*/</b><br>
+            <text class="destaque">display: flex</text>
+            <br><br>
+            <b>/*Direcionamento dos itens*/</b><br>
+            <text class="destaque">flex-direction:</text> column(itens separados em blocos)/ row(um item do lado do outro)<br> + <text class="destaque">-reverse</text>(troca ordem de exibição dos elementos)<br> 
+            <b>/*Comportamento dos itens ao exceder div*/</b><br>
+            <text class="destaque">flex-wrap:</text> nowrap(elementos saem da div pai)/ wrap(ao atingir limite da div pai, elementos saão jogados para baixo)
+            <br><br>
+            <b>/*2 últimos podem ser substituídos por:*/</b><br>
+            <text class="destaque">flex-flow:</text> row/column  wrap/nowrap
+            <br><br>
+            <b>/*Posicionamento dos itens, da flexbox, na horizontal*/</b><br>
+            <text class="destaque">justify-content:</text> center/ flex-end(direita)/ flex-start(esquerda)/ space-between (itens com espaçamento igual)/ space-around(itens com espaçamento igual em relação a eles e o entorno)
+            <br><br>
+            <b>/*Posicionamento dos itens (individualmente), da flexbox, na vertical*/</b><br>
+            <text class="destaque">align-items:</text> center/ flex-end(baixo)/ flex-start(cima)
+            <br><br>
+            <b>/*Posicionamento dos itens (em conjunto), da flexbox, na vertical*/</b><br>
+            <text class="destaque">align-content:</text> center/ flex-end(baixo)/ flex-start(cima)
+        </p>
+    </div>
+    <h3>.flexpai .filhos:</h3>
+    <div class="codigo">
+        <p>
+            <b>/*Crescimento automatizado dos filhos,se adaptando ao tamanho da tela*/</b><br>
+            <text class="destaque">flex-grow:</text> --ritmo de crescimento-- /* posso colocar essa propriedade individualmente no style de cada filho, assim terei elementos de tamanhos diferentes na tela*/
+            <br><br>
+            <b>/*Tamanho responsívo específico de cada filho em relação ao tamanho total da flex*/</b><br>
+            <text class="destaque">flex:</text> --tamanho--% /*sequencialmente os elementos ocuparão a mesma linha até atingir os 100% de largura da tela*/<br>
+            <b>/*É necessário para isso considerar margem entre os itens e também adicionar no início do arquivo:*/</b><br>
+            <text class="destaque">*{<br>
+                box-sizing: border-box;<br>    
+            }</text><br>
+        </p>
+    </div>
+    <h3>Veja:</h3>
+    <p>
+        <a href="./exemplo.html">EXEMPLO DE PÁGINA COM USO DE FLEXBOX AQUI!</a>
+    </p>
+
+    <hr><br>
+    <p>
+        <a href="../../index.html">Voltar à página princiapl</a>
+    </p>
+    
+</body>
+</html>
