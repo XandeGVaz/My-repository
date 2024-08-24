@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de saída do JS</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1>Tipos de saída do JS</h1>
+
+    <h2>InnerHTML</h2>
+    <p>
+        Neste tipo de sáida é obtido um elemento do html (uma tag por exemplo), e escreve-se algo nela pelo arquivo JS
+    </p>
+    <h3>Exemplo</h3>
+    <p>No arquivo html:</p>
+    <div class="codigo">
+        <p>
+            --p <text class="destaque">id="text"</text>-- --/p--
+        </p>
+    </div>
+    <p>No arquivo JS:</p>
+    <div class="codigo">
+        <p><text class="destaque">document.GetElementById("text").innerHTML="Hello World!"</text></p>
+    </div>
+    <p>
+        Existem <text class="destaque">4 tipos principais</text> de saídas no Java Script
+    </p>
+
+    <h2>Document.Write</h2>
+    <p>Funciona colocando dentro de um script internamente ao arquivo HTML (dentro de uma tag)</p>
+    <p>Já aceita funções lógicas</p>
+    <p><text class="destaque">Mais utilizado para testes</text></p>
+    <hr><br>
+    <div class="return">
+        <a href="../index.html">Voltar à página principal</a>
+    </div>
+</body>
+</html>

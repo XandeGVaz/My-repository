@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+}
+
+/*Estilização por tag*/
+body{
+    margin: 0px;
+    background: rgb(234, 221, 238);
+}
+
+
+h1,h2{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+h3,h4{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(187, 187, 6);
+}
+
+h1,h2,h3,h4,h5,p,hr,ul,ol{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+/*Estilização por classe*/
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.destaque{
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    margin:0%;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*Estilização por id*/
+#title{
+    text-align:center;
+    color: rgb(3, 68, 13);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: rgb(111, 224, 177);
+    border: 10px ridge white;
+    border-radius: 5px;
+}
+
+/*Estilização para exemplos de código*/
+.codigo{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    border: 5px double black; 
+    padding:20px; 
+    background-color: white;
+}
+.codigo .destaque{
+    color:red;
+}
+
+/*Exemplo de página utilizando flexbox nas divisões*/
+header{
+    height: 100px;
+    display: flex;
+    background-color: #808080;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+header h1{
+    flex: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 1px;
+}
+header p{
+    flex: 100%;
+    text-align:center;
+    color: rgb(56, 67, 68);
+    margin-top: 0px;
+    font-size: 8px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+nav{
+    margin: 2px 0px 0px 0px;
+    background-image: linear-gradient(to right, black, rgb(80, 54, 70));
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+nav a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-right: 20px;
+}
+
+nav a:hover{
+    background-color: rgb(224, 216, 224);
+    color: rgb(45, 3, 73);
+}
+.return_mobile{/*Botão de retonar para página anterior*/
+    background-color: rgb(49, 41, 51);
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.return_mobile a{ /*Classe somente será válida para links*/
+    flex: 100%;
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(248, 248, 250);
+    border: 5px double rgb(33, 33, 37);
+    border-radius: 2px;
+    padding: 10px 15px 5px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.return_mobile a:hover{ /*Classe somente será válida para links*/
+    color: white;
+    background-color: black;
+}
+.content{
+    margin-top: 5px;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-image: linear-gradient(45deg, white, rgb(160, 146, 146)) ;
+    height: auto;
+    flex: 50%;
+    text-align: center;
+    margin-right:1%;
+    margin-left: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.card img{
+    max-width: 100%;
+}
+.card:hover{
+    opacity: 70%;
+}
+.return{/*Botão de retonar para página anterior*/
+    background-color: rgb(49, 41, 51);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.return a{ /*Classe somente será válida para links*/
+    flex: 100%;
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(248, 248, 250);
+    border: 5px double rgb(33, 33, 37);
+    border-radius: 2px;
+    padding: 10px 15px 5px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.return a:hover{ /*Classe somente será válida para links*/
+    color: white;
+    background-color: black;
+}
+
+@media only screen and (max-width: 700px){
+    nav{
+        flex-flow: column nowrap;
+    }
+    nav a{
+        margin-right: 0%;
+        border-bottom: 2px solid black;
+    }
+    .return_mobile{
+        margin-top: 10px;
+        display: flex;
+    }
+    .return{
+        display:none;
+    }
+}

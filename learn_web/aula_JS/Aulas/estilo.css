@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+
+/*Estilização por tag*/
+body{
+    background: rgb(234, 221, 238);
+}
+
+
+h1,h2{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+
+}
+
+h3,h4{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(187, 187, 6);
+}
+
+h1,h2,h3,h4,h5,p,ul,ol{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+}
+
+/*Estilização por classe*/
+.font-courier{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.destaque{
+    padding-left: 0.1%;
+    padding-right: 0.1%;
+    margin:0%;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*Estilização por id*/
+#title{
+    text-align:center;
+    color: rgb(3, 68, 13);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: rgb(111, 224, 177);
+    border: 10px ridge white;
+    border-radius: 5px;
+}
+
+/*Estilização para exemplos de código*/
+.codigo{
+    margin-left: 3.3%;
+    margin-right: 3.3%;
+    border: 5px double black; 
+    padding:20px; 
+    background-color: white;
+}
+.codigo .destaque{
+    color:red;
+}
+
+/*Botão de retorno à página principal*/
+.return{
+    background-image: linear-gradient(to right,rgb(37, 13, 35),rgb(65, 9, 55));
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.return a{
+    flex: 100%;
+    flex-grow: 1;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(229, 234, 235);
+    padding: 8px 7px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.return a:hover{
+    color: white;
+    background-image: linear-gradient(to right,rgb(0, 0, 0),rgb(66, 66, 66));
+}
