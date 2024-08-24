@@ -9,10 +9,15 @@
 <body>
     <h1>Tipos de saída do JS</h1>
 
+    <p>
+        Existem <text class="destaque">4 tipos principais</text> de saídas no Java Script
+    </p>
+
     <h2>InnerHTML</h2>
     <p>
         Neste tipo de sáida é obtido um elemento do html (uma tag por exemplo), e escreve-se algo nela pelo arquivo JS
     </p>
+    <p><text class="destaque">Mais utilizado para odicionar interatividade à página</text></p>
     <h3>Exemplo</h3>
     <p>No arquivo html:</p>
     <div class="codigo">
@@ -24,14 +29,44 @@
     <div class="codigo">
         <p><text class="destaque">document.GetElementById("text").innerHTML="Hello World!"</text></p>
     </div>
-    <p>
-        Existem <text class="destaque">4 tipos principais</text> de saídas no Java Script
-    </p>
 
     <h2>Document.Write</h2>
-    <p>Funciona colocando dentro de um script internamente ao arquivo HTML (dentro de uma tag)</p>
+    <p>Funciona colocando dentro de um script presente no arquivo HTML (dentro de uma tag)</p>
     <p>Já aceita funções lógicas</p>
+    <p>Saída é visualizada na própria TAG</p>
     <p><text class="destaque">Mais utilizado para testes</text></p>
+    <h3>Exemplo</h3>
+    <p>No arquivo html:</p>
+    <div class="codigo">
+        /*Dentro da Tag*/
+        <p><text class="destaque">document.write("text")</text></p>
+        <p>/* OU */</p>
+        <p><text class="destaque">document.write(function)</text></p>
+    </div>
+
+    <h2>Alert</h2>
+    <p>Funciona tanto com texto quanto com funções</p>
+    <p>Pode ser colocado tanto no arquivo JS quanto em um script interno</p>
+    <p><text class="destaque">Mais utilizado para obter resultados ao longo do desenvolvimento</text></p>
+    <h3>Exemplo</h3>
+    <p>No arquivo JS anexado:</p>
+    <div class="codigo">
+        <p><text class="destaque">alert("text")</text></p>
+        <p>/* OU */</p>
+        <p><text class="destaque">alert(function)</text></p>
+    </div>
+
+    <h2>Console.Log</h2>
+    <p>Mais silencioso, aparecendo somente na área de <text class="destaque">CONSOLE</text> do site</p>
+    <p>Permite olhar respostas do navegador sem atrapalahr fluxo da página</p>
+    <p>Para visualizar: apertar <text class="destaque">F12</text></p>
+    <p><text class="destaque">Mais utilizado para obter resultados ao longo do desenvolvimento</text></p>
+    <h3>Exemplo</h3>
+    <p>No arquivo JS:</p>
+    <div class="codigo">
+        <p><text class="destaque">console.log("text")</text></p>
+    </div>
+
     <hr><br>
     <div class="return">
         <a href="../index.html">Voltar à página principal</a>
