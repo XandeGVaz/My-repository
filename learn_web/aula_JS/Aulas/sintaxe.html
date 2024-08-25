@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxe do JS</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <h1>Sintaxe do JS</h1>
+
+    <h2>Sintaxe Básica</h2>
+    <p>Sintaxe básica parecida com o da linguagem C</p>
+    <ul>
+        <li>
+            <text class="destaque"> ("") para strings, e (--exp--) para expressões com variáveis/números </text>
+        </li>
+        <li>
+            <text class="destaque">É case sensitive</text>
+        </li>
+        <li>
+            <text class="destaque">Não aceita hífen em nomes de variáveis</text>
+        </li>
+        <li>
+            <text class="destaque">Comentação (// e /**/)</text>
+        </li>
+    </ul>
+
+    <h2>Variáveis</h2>
+    <p>Grande diferença do C nos tipos de variáveis</p>
+    <p>As possíveis variáveis do JS:</p>
+    <ul>
+        <li>
+            <text class="destaque">var</text>
+        </li>
+        <li>
+            <text class="destaque">let</text>
+        </li>
+        <li>
+            <text class="destaque">const</text>
+        </li>
+    </ul>
+    <h3>VAR</h3>
+    <p>Coringa: permite reatribuição e redeclaração independente da hierarquia dos blocos</p>
+    <h3>LET</h3>
+    <p>Permite reatribuição</p>
+    <p>Não permite redeclaração dentro do mesmo bloco</p>
+    <p>Mas caso mudemos de escopo, a redeclaração funcionará <text class="destaque">dentro desse escopo</text></p>
+    <h3>CONST</h3>
+    <p>Não permite reatribuição e nem redeclaração <text class="destaque">independente do bloco atual</text></p>
+
+    <h2>Concatenação</h2>
+    <p>O JS permite concatenação de variáveis, permitindo unir strings</p>
+    <p>
+        Não é aconselhável concatenar strings juntamente a números<br>
+        Mas caso faça isso, o primeiro elemento a ser concatenado determinará se será uma concatenação ou uma soma de elementos
+    </p>
+    <div class="codigo">
+        <p>/*No arquivo js dessa aula*/</p>
+        <p>
+            <text class="destaque">
+                let a, b, c;<br>
+                a = "hello"; b = "world";<br>
+                c = a + " " + b + "!";
+            </text>
+        </p>
+        <p>/*resultado:*/</p>
+        <p id="result"></p>
+    </div>
+
+    <h2>Operadores</h2>
+    <p>Funcionamento dos operadores praticamente igual aos da linguagem C</p>
+    <p>
+        <a href="https://www.w3schools.com/js/js_operators.asp" target="_blank">
+            <text class="destaque">FUNCIONAMENTO DETALHADO DOS OPERADORES AQUI!</text>
+        </a>
+    </p>
+
+    <h2>Funções</h2>
+    <p>Funcionamento parecido com o do C, mas sem a tipagem dos parâmetros</p>
+    <h3>Exemplos</h3>
+    <p>No arquivo JS:</p>
+    <div class="codigo">
+        <p>
+            /*Função de dar oi para uma pessoa com um dado nome*/<br>
+            <text class="destaque">
+                function hello(name){<br>
+                    alert("hello " + name);<br>
+                }
+            </text>
+        </p>
+    </div>
+    <p>
+        Caso necessário, a funções podem ter um retorno
+    </p>
+    <div class="codigo">
+        <p>
+            /*Função de soma*/<br>
+            <text class="destaque">
+                function soma(a, b){<br>
+                    return a+b;<br>
+                }
+            </text>
+        </p>
+    </div>
+    <h3>Ná prática</h3>
+    <button style="margin-left: 45%" onclick="hello()">Clique Aqui!</button>
+
+    <hr><br>
+    <div class="return">
+        <a href="../index.html">Voltar à página principal</a>
+    </div>
+    <script src="./JS/sintaxe.js"></script>
+</body>
+</html>
