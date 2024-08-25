@@ -5,7 +5,7 @@ b = "world";
 c = a + " " + b + "!";
 document.getElementById("result").innerHTML = "O resultado de <b>c</b> é: " + c ;
 
-// Demonstração  de funçÇAR em JS
+// Demonstração  de funções em JS
 function hello(){
     alert("Hello World!");
 }
