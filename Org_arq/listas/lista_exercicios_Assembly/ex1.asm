@@ -14,14 +14,12 @@ main:
     jal bubble_sort                             # pula para rotina de ordenação
     la a0, vetor                                # a0 recebe endereço de primeiro valor do vetor
     jal imprime_vetor                           # impressão de vetor ordenado crescentemente
-    #Fim de programa
     li a7, 10
-    ecall
+    ecall                                       # fim de programa
 
 #Rotinha de impressão de vetor de inteiros  
 #    Parâmetros:
 #        a0: endereço do primeiro valor do vetor (&vetor[0])
-#
 imprime_vetor:
     mv a3, a0                                   # o registrador a3 recebe endereço do vetor
     la t1, tam                                  # t1 = tam 
@@ -41,7 +39,6 @@ sai_loop_imprime:
 #Rotina de troca de dois valores
 #    Parâmetros: 
 #        a4 ea a5: endereços a terem seus valores trocados
-#
 troca:
     lw t1, 0(a4)
     lw t2, 0(a5)
@@ -52,7 +49,6 @@ troca:
 #Rotina de ordenação pelo método bubble_sort
 #    Parâmetros:
 #        a0: endereço do primeiro valor do vetor (&vetor[0])
-#
 bubble_sort:
     la t1, tam                                  # t1 = tam 
     lw a1, 0(t1)                                # a1 recebe tamanho do vetor 
