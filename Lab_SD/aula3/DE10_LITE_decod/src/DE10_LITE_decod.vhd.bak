@@ -1,0 +1,41 @@
+-- Copyright
+-- Name: DE10_LITE_decod
+-- Date: 25/09/2024
+-- Version:
+-- Owners
+
+entity DE10_LITE_decod is
+	port
+	(
+		SW 	: in bit_vector(9 downto 0);		--Chaves
+		HEX0	: out bit_vector(7 downto 0)		--Display
+	);
+end DE10_LITE_decod;
+
+architecture netlist of DE10_LITE_decod is
+
+begin
+	-- Segmento 'a'
+	HEX0(0) <= NOT((NOT SW(3) AND SW(2)) OR (SW(1) AND SW(2)) OR (SW(0) AND NOT SW(3)) OR (NOT SW(1) AND NOT SW(3)) OR (NOT SW(0) AND SW(1) AND SW(3)) OR (SW(0) AND NOT SW(1) AND NOT SW(2)));
+	
+	-- Segmento 'b'
+	HEX0(1) <=
+	
+	-- Segmento 'c'
+	HEX0(2) <= 
+	
+	-- Segmento 'd'
+	HEX0(3) <=
+	
+	-- Segmento 'e'
+	HEX0(4) <=
+	
+	-- Segmento 'f'
+	HEX0(5) <=
+	
+	-- Segmento 'g'
+	HEX0(6) <=
+	
+	-- Ponto decimal
+	HEX0(7) <= '1';		--Apagado
+end;

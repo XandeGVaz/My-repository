@@ -1,0 +1,39 @@
+entity fadd
+		port(
+			a, b , cin		: in bit;
+			s, cout			: out bit
+			);
+end fadd;
+
+architecture top_down of fadd is
+
+	signal aux : bit_vector (2 downto 0);
+	
+begin
+	
+	-- concatena abcin
+	aux <= a & b & cin;
+	
+	--whith select
+	with aux select
+		s <= "0" when "000",
+				"1" when "001",
+				"1" when "010",
+				"0" when "011",
+				"1" when "100",
+				"0" when "101",
+				"0" when "110",
+				"1" when others;
+
+	--when else
+	<optional_label>: 
+	cout <= "0" when "000" else
+				"0" when "001" else 
+				"0" when "010" else
+				"1" when "011" else
+				"0" when "100" else
+				"1" when "101" else
+				"1" when "110" else
+				"1"<value>;
+
+end
