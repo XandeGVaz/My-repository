@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Wed Oct 16 15:39:31 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : DE10_LITE_ALU
+Top-level Entity Name : DE10_LITE_ALU
+Family : MAX 10
+Device : 10M50DAF484C7G
+Power Models : Final
+Total Thermal Power Dissipation : 106.97 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 89.98 mW
+I/O Thermal Power Dissipation : 16.99 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

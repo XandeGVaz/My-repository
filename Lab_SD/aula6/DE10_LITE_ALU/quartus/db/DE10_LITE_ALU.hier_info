@@ -1,0 +1,221 @@
+|DE10_LITE_ALU
+HEX0[0] <= hex27seg:display0.segments[0]
+HEX0[1] <= hex27seg:display0.segments[1]
+HEX0[2] <= hex27seg:display0.segments[2]
+HEX0[3] <= hex27seg:display0.segments[3]
+HEX0[4] <= hex27seg:display0.segments[4]
+HEX0[5] <= hex27seg:display0.segments[5]
+HEX0[6] <= hex27seg:display0.segments[6]
+HEX0[7] <= hex27seg:display0.segments[7]
+SW[0] => alu:ALU0.A[0]
+SW[1] => alu:ALU0.A[1]
+SW[2] => alu:ALU0.A[2]
+SW[3] => alu:ALU0.A[3]
+SW[4] => alu:ALU0.B[0]
+SW[5] => alu:ALU0.B[1]
+SW[6] => alu:ALU0.B[2]
+SW[7] => alu:ALU0.B[3]
+SW[8] => alu:ALU0.ALUControl[1]
+SW[9] => alu:ALU0.ALUControl[2]
+KEY[0] => alu:ALU0.ALUControl[0]
+KEY[1] => ~NO_FANOUT~
+LEDR[0] <= alu:ALU0.Zero
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|DE10_LITE_ALU|alu:ALU0
+A[0] => andResult[0].IN0
+A[0] => orResult[0].IN0
+A[0] => adder:add.A[0]
+A[1] => andResult[1].IN0
+A[1] => orResult[1].IN0
+A[1] => adder:add.A[1]
+A[2] => andResult[2].IN0
+A[2] => orResult[2].IN0
+A[2] => adder:add.A[2]
+A[3] => andResult[3].IN0
+A[3] => orResult[3].IN0
+A[3] => adder:add.A[3]
+B[0] => andResult[0].IN1
+B[0] => orResult[0].IN1
+B[0] => mux21:mux0.I0[0]
+B[0] => mux21:mux0.I1[0]
+B[1] => andResult[1].IN1
+B[1] => orResult[1].IN1
+B[1] => mux21:mux0.I0[1]
+B[1] => mux21:mux0.I1[1]
+B[2] => andResult[2].IN1
+B[2] => orResult[2].IN1
+B[2] => mux21:mux0.I0[2]
+B[2] => mux21:mux0.I1[2]
+B[3] => andResult[3].IN1
+B[3] => orResult[3].IN1
+B[3] => mux21:mux0.I0[3]
+B[3] => mux21:mux0.I1[3]
+ALUControl[0] => Mux1.IN6
+ALUControl[0] => Mux2.IN6
+ALUControl[0] => Mux3.IN6
+ALUControl[0] => Mux4.IN5
+ALUControl[0] => mux21:mux0.S
+ALUControl[1] => Mux1.IN5
+ALUControl[1] => Mux2.IN5
+ALUControl[1] => Mux3.IN5
+ALUControl[1] => Mux4.IN4
+ALUControl[2] => Mux1.IN4
+ALUControl[2] => Mux2.IN4
+ALUControl[2] => Mux3.IN4
+ALUControl[2] => Mux4.IN3
+Result[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Result[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Result[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_ALU|alu:ALU0|mux21:mux0
+I0[0] => Z.DATAB
+I0[1] => Z.DATAB
+I0[2] => Z.DATAB
+I0[3] => Z.DATAB
+I1[0] => Z.DATAA
+I1[1] => Z.DATAA
+I1[2] => Z.DATAA
+I1[3] => Z.DATAA
+S => Z.OUTPUTSELECT
+S => Z.OUTPUTSELECT
+S => Z.OUTPUTSELECT
+S => Z.OUTPUTSELECT
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_ALU|alu:ALU0|adder:add
+A[0] => fadd:fa0.a
+A[1] => fadd:fa1.a
+A[2] => fadd:fa2.a
+A[3] => fadd:fa3.a
+B[0] => fadd:fa0.b
+B[1] => fadd:fa1.b
+B[2] => fadd:fa2.b
+B[3] => fadd:fa3.b
+Cin => fadd:fa0.ci
+RESULT[0] <= fadd:fa0.s
+RESULT[1] <= fadd:fa1.s
+RESULT[2] <= fadd:fa2.s
+RESULT[3] <= fadd:fa3.s
+
+
+|DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa0
+a => s.IN1
+a => co.IN1
+b => s.IN0
+b => co.IN0
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa1
+a => s.IN1
+a => co.IN1
+b => s.IN0
+b => co.IN0
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa2
+a => s.IN1
+a => co.IN1
+b => s.IN0
+b => co.IN0
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa3
+a => s.IN1
+a => co.IN1
+b => s.IN0
+b => co.IN0
+b => co.IN0
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_ALU|hex27seg:display0
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN0
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[1] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[1] => segments.IN1
+hexa[1] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[2] => segments.IN1
+hexa[2] => segments.IN0
+hexa[2] => segments.IN0
+hexa[2] => segments.IN0
+hexa[2] => segments.IN1
+hexa[2] => segments.IN0
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+segments[0] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[7] <= <VCC>
+
+
