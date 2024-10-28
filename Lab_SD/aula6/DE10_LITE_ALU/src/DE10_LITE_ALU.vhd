@@ -1,3 +1,11 @@
+--Copryght:		
+--Date:		23/10/24
+--Version:	1.0
+--Owners:	Gabriel D. Maruschi
+-- 			Vitor Alexandre Garcia Vaz
+
+
+
 entity DE10_LITE_ALU is
 	port
 	(

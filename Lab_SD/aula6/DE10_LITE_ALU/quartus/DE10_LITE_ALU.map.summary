@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Oct 16 15:44:16 2024
-Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Analysis & Synthesis Status : Successful - Wed Oct 23 11:07:48 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : DE10_LITE_ALU
 Top-level Entity Name : DE10_LITE_ALU
 Family : MAX 10
-Total logic elements : 36
-    Total combinational functions : 36
+Total logic elements : 35
+    Total combinational functions : 35
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 30

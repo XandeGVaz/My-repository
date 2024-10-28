@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE10_LITE_ALU
-Wed Oct 16 15:44:16 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Wed Oct 23 11:07:48 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -16,17 +16,16 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
  10. Port Connectivity Checks: "alu:ALU0|adder:add|fadd:fa3"
- 11. Port Connectivity Checks: "alu:ALU0|adder:add"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -43,26 +42,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 16 15:44:16 2024          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                      ; DE10_LITE_ALU                                  ;
-; Top-level Entity Name              ; DE10_LITE_ALU                                  ;
-; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 36                                             ;
-;     Total combinational functions  ; 36                                             ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 30                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-; UFM blocks                         ; 0                                              ;
-; ADC blocks                         ; 0                                              ;
-+------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Oct 23 11:07:48 2024       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; DE10_LITE_ALU                               ;
+; Top-level Entity Name              ; DE10_LITE_ALU                               ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 35                                          ;
+;     Total combinational functions  ; 35                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 30                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -156,8 +155,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -167,18 +166,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
-; ../src/DE10_LITE_ALU.vhd         ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd ;         ;
-; ../src/alu.vhd                   ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/alu.vhd           ;         ;
-; ../src/mux21.vhd                 ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/mux21.vhd         ;         ;
-; ../src/fadd.vhd                  ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/fadd.vhd          ;         ;
-; ../src/adder.vhd                 ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/adder.vhd         ;         ;
-; ../src/hex27seg.vhd              ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/hex27seg.vhd      ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; ../src/DE10_LITE_ALU.vhd         ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd ;         ;
+; ../src/alu.vhd                   ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_ALU/src/alu.vhd           ;         ;
+; ../src/mux21.vhd                 ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_ALU/src/mux21.vhd         ;         ;
+; ../src/fadd.vhd                  ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_ALU/src/fadd.vhd          ;         ;
+; ../src/adder.vhd                 ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_ALU/src/adder.vhd         ;         ;
+; ../src/hex27seg.vhd              ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_ALU/src/hex27seg.vhd      ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -186,16 +185,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 36          ;
+; Estimated Total logic elements              ; 35          ;
 ;                                             ;             ;
-; Total combinational functions               ; 36          ;
+; Total combinational functions               ; 35          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 25          ;
-;     -- 3 input functions                    ; 9           ;
-;     -- <=2 input functions                  ; 2           ;
+;     -- 4 input functions                    ; 26          ;
+;     -- 3 input functions                    ; 8           ;
+;     -- <=2 input functions                  ; 1           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 36          ;
+;     -- normal mode                          ; 35          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
@@ -208,8 +207,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; SW[8]~input ;
 ; Maximum fan-out                             ; 12          ;
-; Total fan-out                               ; 169         ;
-; Average fan-out                             ; 1.76        ;
+; Total fan-out                               ; 168         ;
+; Average fan-out                             ; 1.77        ;
 +---------------------------------------------+-------------+
 
 
@@ -218,14 +217,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
-; |DE10_LITE_ALU             ; 36 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 30   ; 0            ; 0          ; |DE10_LITE_ALU                             ; DE10_LITE_ALU ; work         ;
+; |DE10_LITE_ALU             ; 35 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 30   ; 0            ; 0          ; |DE10_LITE_ALU                             ; DE10_LITE_ALU ; work         ;
 ;    |alu:ALU0|              ; 18 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|alu:ALU0                    ; alu           ; work         ;
 ;       |adder:add|          ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|alu:ALU0|adder:add          ; adder         ; work         ;
 ;          |fadd:fa0|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa0 ; fadd          ; work         ;
 ;          |fadd:fa1|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa1 ; fadd          ; work         ;
 ;          |fadd:fa2|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa2 ; fadd          ; work         ;
 ;          |fadd:fa3|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|alu:ALU0|adder:add|fadd:fa3 ; fadd          ; work         ;
-;    |hex27seg:display0|     ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|hex27seg:display0           ; hex27seg      ; work         ;
+;    |hex27seg:display0|     ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_ALU|hex27seg:display0           ; hex27seg      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -263,15 +262,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "alu:ALU0|adder:add" ;
-+------+-------+----------+----------------------+
-; Port ; Type  ; Severity ; Details              ;
-+------+-------+----------+----------------------+
-; cin  ; Input ; Info     ; Stuck at GND         ;
-+------+-------+----------+----------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -281,13 +271,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_lcell_comb ; 39                          ;
 ;     normal            ; 39                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 25                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 26                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 7.14                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 6.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -305,46 +295,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 16 15:44:09 2024
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Oct 23 11:07:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE10_LITE_ALU -c DE10_LITE_ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/de10_lite_alu/src/de10_lite_alu.vhd
-    Info (12022): Found design unit 1: DE10_LITE_ALU-top File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 15
-    Info (12023): Found entity 1: DE10_LITE_ALU File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 1
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/de10_lite_alu/src/alu.vhd
-    Info (12022): Found design unit 1: alu-estrutural File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/alu.vhd Line: 29
-    Info (12023): Found entity 1: alu File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/alu.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/de10_lite_alu/src/mux21.vhd
-    Info (12022): Found design unit 1: mux21-concorrente File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/mux21.vhd Line: 15
-    Info (12023): Found entity 1: mux21 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/mux21.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/de10_lite_alu/src/fadd.vhd
-    Info (12022): Found design unit 1: fadd-concorrente File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/fadd.vhd Line: 14
-    Info (12023): Found entity 1: fadd File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/fadd.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/de10_lite_alu/src/adder.vhd
-    Info (12022): Found design unit 1: adder-hierarquia File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/adder.vhd Line: 15
-    Info (12023): Found entity 1: adder File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/adder.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/de10_lite_alu/src/hex27seg.vhd
-    Info (12022): Found design unit 1: hex27seg-logica File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/hex27seg.vhd Line: 16
-    Info (12023): Found entity 1: hex27seg File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/hex27seg.vhd Line: 8
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_alu/src/de10_lite_alu.vhd
+    Info (12022): Found design unit 1: DE10_LITE_ALU-top File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 15
+    Info (12023): Found entity 1: DE10_LITE_ALU File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_alu/src/alu.vhd
+    Info (12022): Found design unit 1: alu-estrutural File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/alu.vhd Line: 29
+    Info (12023): Found entity 1: alu File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/alu.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_alu/src/mux21.vhd
+    Info (12022): Found design unit 1: mux21-concorrente File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/mux21.vhd Line: 15
+    Info (12023): Found entity 1: mux21 File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/mux21.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_alu/src/fadd.vhd
+    Info (12022): Found design unit 1: fadd-concorrente File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/fadd.vhd Line: 14
+    Info (12023): Found entity 1: fadd File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/fadd.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_alu/src/adder.vhd
+    Info (12022): Found design unit 1: adder-hierarquia File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/adder.vhd Line: 15
+    Info (12023): Found entity 1: adder File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/adder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_alu/src/hex27seg.vhd
+    Info (12022): Found design unit 1: hex27seg-logica File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/hex27seg.vhd Line: 16
+    Info (12023): Found entity 1: hex27seg File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/hex27seg.vhd Line: 8
 Info (12127): Elaborating entity "DE10_LITE_ALU" for the top level hierarchy
-Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU0" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 23
-Info (12128): Elaborating entity "mux21" for hierarchy "alu:ALU0|mux21:mux0" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/alu.vhd Line: 60
-Info (12128): Elaborating entity "adder" for hierarchy "alu:ALU0|adder:add" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/alu.vhd Line: 62
-Info (12128): Elaborating entity "fadd" for hierarchy "alu:ALU0|adder:add|fadd:fa0" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/adder.vhd Line: 21
-Info (12128): Elaborating entity "hex27seg" for hierarchy "hex27seg:display0" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 29
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU0" File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 23
+Info (12128): Elaborating entity "mux21" for hierarchy "alu:ALU0|mux21:mux0" File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/alu.vhd Line: 60
+Info (12128): Elaborating entity "adder" for hierarchy "alu:ALU0|adder:add" File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/alu.vhd Line: 62
+Info (12128): Elaborating entity "fadd" for hierarchy "alu:ALU0|adder:add|fadd:fa0" File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/adder.vhd Line: 21
+Info (12128): Elaborating entity "hex27seg" for hierarchy "hex27seg:display0" File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 29
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 4
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 4
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 185 assignments for entity "DE10_LITE_FULL" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_FULL was ignored
@@ -535,15 +525,15 @@ Warning (20013): Ignored 185 assignments for entity "DE10_LITE_FULL" -- entity d
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 7
-Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/14611432/Documents/DE10_LITE_ALU/src/DE10_LITE_ALU.vhd Line: 7
+Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 36 logic cells
+    Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 200 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Wed Oct 16 15:44:16 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Wed Oct 23 11:07:48 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 

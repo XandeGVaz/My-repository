@@ -1,15 +1,12 @@
--- Declaracao da ENTIDADE (entity)
--- 	Ela estabelece a interface do sistema digital com o mundo, ou seja, os pinos (sinais) de entrada e saida.
--- 	O nome da ENTIDADE deve ter tamanho maximo de 32 caracteres, sem pontuacao ou caracteres especiais.
--- 	Deve comecar por letra e pode incluir algarismos numericos e 'underline' (_).
--- 	O VHDL nao distingue entre maiuscula e minuscula ('case insensitive')
--- 
+--Copryght:		
+--Date:		23/10/24
+--Version:	1.3
+--Owners:	Gabriel D. Maruschi
+-- 			Vitor Alexandre Garcia Vaz
+
 entity alu is
 	port
 	(
-		-- Portas
-		-- A sintaxe eh: NOME_DA_PORTA : MODO (in, out, inout) TIPO (bit, boolean, character, integer, real, time, bit_vector, string);
-		-- Entrada(s)
 		A, B		: in  bit_vector(3 downto 0);	-- Signals A e B do MODO de entrada (in) e do TIPO bit_vector
 		ALUControl	: in  bit_vector(2 downto 0);		-- Signal ALUControl do MODO de entrada (in) e do TIPO bit_vector
 
@@ -20,11 +17,6 @@ entity alu is
 	);
 end alu;
 
--- Declaracao da ARQUITETURA (architecture)
--- 	Ela estabelece a relacao entre os pinos de entrada e de saida, ou seja, o circuito a ser implementado.
--- 	O nome da ARQUITETURA deve ter tamanho maximo de 32 caracteres, sem pontuacao ou caracteres especiais.
--- 	Deve comecar por letra e pode incluir algarismos numericos e 'underline' (_).
--- 	Cada ENTIDADE pode ter mais de uma ARQUITETURA, assim e necessario distingui-las por meio de um nome.
 
 architecture estrutural of alu is	-- ARQUITETURA 'estrutural' associada aa ENTIDADE 'alu'
 	
@@ -38,28 +30,12 @@ architecture estrutural of alu is	-- ARQUITETURA 'estrutural' associada aa ENTID
 	
 	-- Inicio da declaracao da ARQUITETURA
 begin
-
-	-- Para a implementacao da arquitetura da ALU, recomenda-se o uso da construção concorrente "Selected Signal Assignment":
-	--<optional_label>: with <expression> select
-	--<target> <= <value> when <choices>
-	--			  <value> when <choices>
-	--			  <value> when <choices>
-	-- 		      ...
-	--			  <value> when others;
-	--tendo como <target> Result (ou Result_tmp), e como <expression> ALUControl
-	
-	-- Dicas:
-	-- Como o resultado da operacao SLT e a saida ZERO depende de Result, recomenda-se criar um sinal intermediario (Result_tmp)
-	--que armazena o valor das operacoes aritmetica e lógicas, ou zero para as operacoes nao definidas. Lembre-se de que para a
-	--operacao SLT eh necessario calcular A-B para verificar se A eh menor do que B.
-	-- Depois, utiliza-se Result_tmp para definir o valor final de Result e de Zero.
-	-- O valor de ZeroExt pode ser obtido por "000" & Sum(3)
 	
 	-- Operações aritméticas
 	
 	mux0: work.mux21 port map (I0 => B, I1 => (not B), S => ALUControl(0), z => fb);
 	
-	add:	work.adder port map(A => A, B => fB, Cin =>'0', RESULT => adderResult); 
+	add:	work.adder port map(A => A, B => fB, Cin =>ALUControl(0), RESULT => adderResult); 
 	
 	-- Operação and
 	andResult <= A and B;
@@ -80,7 +56,7 @@ begin
 						"0000" when others;
 	
 	-- Flag zero (iguaol a 1 para resultado nulo)
-	Zero <= ((tempResult(0) nand tempResult(1)) nand (tempResult(2) nand tempResult(3)));
+	Zero <= not ((tempResult(0) or tempResult(1)) or (tempResult(2) or tempResult(3)));
 	
 	Result <= tempResult;		-- Resultado final
 	

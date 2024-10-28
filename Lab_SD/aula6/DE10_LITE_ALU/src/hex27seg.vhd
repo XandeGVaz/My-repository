@@ -1,9 +1,9 @@
 -- Copyright
 -- Name: DE10_LITE_decod
--- Date: 25/09/2024
--- Version:
+-- Date: 23/10/2024
+-- Version: 1.1
 -- Owners:	Gabriel Dezejácomo Maruschi
---			Vitor Alexandre Garcia Vaz
+--				Vitor Alexandre Garcia Vaz
 
 entity hex27seg is
 	port
@@ -17,7 +17,8 @@ architecture logica of hex27seg is
 
 begin
 	-- Segmento 'a'
-	segments(0) <= (NOT hexa(3) AND NOT hexa(2) AND NOT hexa(1) AND hexa(0)) OR (NOT hexa(3) AND hexa(2) AND NOT hexa(1) AND NOT hexa(0)) OR (hexa(3) AND hexa(2) AND NOT hexa(1) AND hexa(0)) OR (hexa(3) AND NOT hexa(2) AND hexa(1) AND hexa(0));
+	segments(0) <= (NOT hexa(3) AND NOT hexa(2) AND NOT hexa(1) AND hexa(0)) OR (NOT hexa(3) AND hexa(2) AND NOT hexa(1) AND NOT hexa(0)) OR (hexa(3) AND hexa(2) AND NOT hexa(1) AND hexa(0)) OR (hexa(3) AND NOT hexa(2) AND hexa(1) 
+	AND hexa(0));
 	
 	-- Segmento 'b'
 	segments(1) <= (NOT hexa(3) AND hexa(2) AND NOT hexa(1) AND hexa(0)) OR (hexa(3) AND hexa(2) AND NOT hexa(0)) OR (hexa(2) AND hexa(1) AND NOT hexa(0)) OR (hexa(3) AND hexa(1) AND hexa(0));

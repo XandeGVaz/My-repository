@@ -65,6 +65,7 @@ ALUControl[0] => Mux2.IN6
 ALUControl[0] => Mux3.IN6
 ALUControl[0] => Mux4.IN5
 ALUControl[0] => mux21:mux0.S
+ALUControl[0] => adder:add.Cin
 ALUControl[1] => Mux1.IN5
 ALUControl[1] => Mux2.IN5
 ALUControl[1] => Mux3.IN5
