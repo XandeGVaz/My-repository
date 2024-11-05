@@ -1,0 +1,11 @@
+--oi
+
+entity d_ff is
+	port(
+		clk		: IN bit;
+		cr, pr	: IN bit;
+		d			: IN bit;
+		q			: IN bit
+	
+	);
+end d_ff
