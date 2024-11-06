@@ -1,4 +1,9 @@
---oi4
+
+--Copryght:		
+--Date:		23/10/24
+--Version:	1.0
+--Owners:	Gabriel D. Maruschi
+-- 			Vitor Alexandre Garcia Vaz
 
 ENTITY DE10_LITE_FF IS
 	PORT
@@ -10,24 +15,27 @@ ENTITY DE10_LITE_FF IS
 END DE10_LITE_FF;
 
 ARCHITECTURE top OF DE10_LITE_FF IS
+
 BEGIN
-		
-	D_FF: work.d_ff
+
+	JKFF: work.jk_ff
 		PORT MAP
 		(
-			d => SW(1), clk => KEY(0), cr => KEY(1), q => LEDR(2)
+			j => SW(3), k => SW(2), clk => KEY(0), cr => KEY(1), q => LEDR(2)
+		);
+
+
+	DFF: work.d_ff
+		PORT MAP
+		(
+			d => SW(1), clk => KEY(0), cr => KEY(1), q => LEDR(1)
 		);
 		
-	JK_FF: work.jk_ff
-		PORT MAP
-		(
-			j => SW(3), k => SW(2), clk => KEY(0), cr => KEY(1), q => LEDR(1)
-		);
 		
-	T_FF: work.t_ff
+	TFF: work.t_ff
 		PORT MAP
 		(
-			t => SW(9), clk => KEY(0), cr => KEY(1), q => LEDR(9)
+			t => SW(0), clk => KEY(0), cr => KEY(1), q => LEDR(0)
 		);
 		
 END top;

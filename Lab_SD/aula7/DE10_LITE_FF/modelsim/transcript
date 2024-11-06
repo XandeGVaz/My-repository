@@ -1,0 +1,224 @@
+vsim work.de10_lite_ff
+# vsim work.de10_lite_ff 
+# Start time: 18:38:24 on Nov 05,2024
+# Loading std.standard
+# Loading work.de10_lite_ff(top)
+# Loading work.d_ff(dff_module)
+# Loading work.jk_ff(jkff_module)
+# Loading work.t_ff(tff_module)
+vsim work.d_ff
+# End time: 18:38:45 on Nov 05,2024, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 1
+# vsim work.d_ff 
+# Start time: 18:38:45 on Nov 05,2024
+# Loading std.standard
+# Loading work.d_ff(dff_module)
+add wave -position insertpoint  \
+sim:/d_ff/clk
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/clk
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# de10_lite_ff
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 50ps -step 1 -repeat forever -starttime 0ps -endtime 100ps sim:/d_ff/cr
+# de10_lite_ff
+force -freeze sim:/d_ff/cr 0 0
+add wave -position insertpoint  \
+sim:/d_ff/cr
+run
+noforce sim:/d_ff/cr
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 50ps -step 1 -repeat never -starttime 0ps -endtime 1000ps sim:/d_ff/cr
+# de10_lite_ff
+wave create -driver freeze -pattern clock -initialvalue {Not Logged} -period 200ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/d
+# ** UI-Msg: (vish-4026) Value "not" does not represent a literal of the enumeration type.
+#Invalid value to -initialvalue switch: Not Logged
+# 
+add wave -position insertpoint  \
+sim:/d_ff/d
+wave create -driver freeze -pattern clock -initialvalue {Not Logged} -period 200ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/d
+# ** UI-Msg: (vish-4026) Value "not" does not represent a literal of the enumeration type.
+#Invalid value to -initialvalue switch: Not Logged
+# 
+wave create -driver freeze -pattern clock -initialvalue {Not Logged} -period 200ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/d
+# ** UI-Msg: (vish-4026) Value "not" does not represent a literal of the enumeration type.
+#Invalid value to -initialvalue switch: Not Logged
+# 
+add wave -position insertpoint  \
+sim:/d_ff/d
+force -freeze sim:/d_ff/d 1 0, 0 {100 ps} -r 200
+add wave -position insertpoint  \
+sim:/d_ff/d
+wave create -driver freeze -pattern clock -initialvalue {Not Logged} -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/d
+# ** UI-Msg: (vish-4026) Value "not" does not represent a literal of the enumeration type.
+#Invalid value to -initialvalue switch: Not Logged
+# 
+add wave -position insertpoint  \
+sim:/d_ff/d
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+run
+vsim work.jk_ff
+# End time: 15:45:43 on Nov 05,2024, Elapsed time: -2:-53:-2
+# Errors: 0, Warnings: 1
+# vsim work.jk_ff 
+# Start time: 15:45:43 on Nov 05,2024
+# Loading std.standard
+# Loading work.jk_ff(jkff_module)
+vsim work.d_ff
+# End time: 15:45:55 on Nov 05,2024, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 1
+# vsim work.d_ff 
+# Start time: 15:45:55 on Nov 05,2024
+# Loading std.standard
+# Loading work.d_ff(dff_module)
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/clk
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# jk_ff
+wave create -driver freeze -pattern clock -initialvalue 0 -period 200ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/d
+# jk_ff
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 50ps -step 1 -repeat never -starttime 0ps -endtime 1000ps sim:/d_ff/cr
+# jk_ff
+force -freeze sim:/d_ff/cr 0 0
+add wave -position insertpoint  \
+sim:/d_ff/cr
+add wave -position insertpoint  \
+sim:/d_ff/q
+run
+force -freeze Edit:/d_ff/cr 0 0
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Edit:/d_ff/cr' not found.
+# 
+noforce sim:/d_ff/cr
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000ps sim:/d_ff/cr
+# jk_ff
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/cr ""
+add wave -position 2 -format Logic -height 17 -editable 2 Edit:/d_ff/cr
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/cr ""
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/cr ""
+run
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/clk
+# jk_ff
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000ps sim:/d_ff/cr
+# jk_ff
+wave create -driver freeze -pattern clock -initialvalue 0 -period 200ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/d_ff/d
+# jk_ff
+add wave -position insertpoint  \
+sim:/d_ff/q
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+noforce sim:/d_ff/q
+run
+add wave -position insertpoint  \
+sim:/d_ff/q
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/d_ff/q
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/clk "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /d_ff/d "Time value must be greater than "now": 1000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# End time: 15:56:17 on Nov 05,2024, Elapsed time: 0:10:22
+# Errors: 0, Warnings: 1

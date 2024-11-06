@@ -1,4 +1,8 @@
---oi
+--Copryght:		
+--Date:		23/10/24
+--Version:	1.0
+--Owners:	Gabriel D. Maruschi
+-- 			Vitor Alexandre Garcia Vaz
 
 entity d_ff is
 	port(

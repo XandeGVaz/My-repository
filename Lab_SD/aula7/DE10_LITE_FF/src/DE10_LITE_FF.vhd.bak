@@ -1,2 +1,64 @@
 --oi4
 
+ENTITY DE10_LITE_FF IS
+	PORT
+	(
+		SW		:	IN 	BIT_VECTOR(9 DOWNTO 0);
+		KEY	: 	IN 	BIT_VECTOR(1 DOWNTO 0);
+		LEDR	: 	OUT	BIT_VECTOR(9 DOWNTO 0)
+	);
+END DE10_LITE_FF;
+
+ARCHITECTURE top OF DE10_LITE_FF IS
+
+	component d_ff
+		PORT
+		(
+			clk		: IN bit;
+			cr			: IN bit;
+			d			: IN bit;
+			q			: OUT bit
+		);
+	end component;
+
+	component jk_ff
+		PORT
+		(
+			cr		: IN BIT;
+			j, k	: IN BIT;
+			clk	: IN BIT;
+			q		: OUT BIT
+		);
+	end component;
+
+	component t_ff
+		PORT
+		(
+			cr		: IN BIT;
+			t		: IN BIT;
+			clk	: IN BIT;
+			q		: OUT BIT
+		);
+	end component;
+
+BEGIN
+		
+	DFF: d_ff
+		PORT MAP
+		(
+			d => SW(1), clk => KEY(0), cr => KEY(1), q => LEDR(2)
+		);
+		
+	JKFF: jk_ff
+		PORT MAP
+		(
+			j => SW(3), k => SW(2), clk => KEY(0), cr => KEY(1), q => LEDR(3)
+		);
+		
+	TFF: t_ff
+		PORT MAP
+		(
+			t => SW(9), clk => KEY(0), cr => KEY(1), q => LEDR(9)
+		);
+		
+END top;

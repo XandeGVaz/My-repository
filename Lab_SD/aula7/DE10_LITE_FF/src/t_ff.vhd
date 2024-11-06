@@ -1,4 +1,8 @@
---oi3
+--Copryght:		
+--Date:		23/10/24
+--Version:	1.0
+--Owners:	Gabriel D. Maruschi
+-- 			Vitor Alexandre Garcia Vaz
 
 ENTITY  t_ff IS
 	PORT

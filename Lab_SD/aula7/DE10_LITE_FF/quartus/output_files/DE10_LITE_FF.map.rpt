@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE10_LITE_FF
-Wed Oct 30 11:49:35 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Nov  5 18:07:23 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -23,7 +23,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -40,26 +40,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 30 11:49:34 2024       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; DE10_LITE_FF                                ;
-; Top-level Entity Name              ; DE10_LITE_FF                                ;
-; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3                                           ;
-;     Total combinational functions  ; 2                                           ;
-;     Dedicated logic registers      ; 3                                           ;
-; Total registers                    ; 3                                           ;
-; Total pins                         ; 22                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 18:07:23 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                      ; DE10_LITE_FF                                   ;
+; Top-level Entity Name              ; DE10_LITE_FF                                   ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 3                                              ;
+;     Total combinational functions  ; 2                                              ;
+;     Dedicated logic registers      ; 3                                              ;
+; Total registers                    ; 3                                              ;
+; Total pins                         ; 22                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -153,28 +153,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
-; ../src/d_ff.vhd                  ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_FF/src/d_ff.vhd         ;         ;
-; ../src/jk_ff.vhd                 ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_FF/src/jk_ff.vhd        ;         ;
-; ../src/t_ff.vhd                  ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_FF/src/t_ff.vhd         ;         ;
-; ../src/DE10_LITE_FF.vhd          ; yes             ; User VHDL File  ; C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; ../src/d_ff.vhd                  ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/d_ff.vhd         ;         ;
+; ../src/jk_ff.vhd                 ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/jk_ff.vhd        ;         ;
+; ../src/t_ff.vhd                  ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/t_ff.vhd         ;         ;
+; ../src/DE10_LITE_FF.vhd          ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -209,16 +209,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name       ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
-; |DE10_LITE_FF              ; 2 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |DE10_LITE_FF             ; DE10_LITE_FF ; work         ;
-;    |d_ff:D_FF|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_FF|d_ff:D_FF   ; d_ff         ; work         ;
-;    |jk_ff:JK_FF|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_FF|jk_ff:JK_FF ; jk_ff        ; work         ;
-;    |t_ff:T_FF|             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_FF|t_ff:T_FF   ; t_ff         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name      ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+--------------+--------------+
+; |DE10_LITE_FF              ; 2 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |DE10_LITE_FF            ; DE10_LITE_FF ; work         ;
+;    |d_ff:DFF|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_FF|d_ff:DFF   ; d_ff         ; work         ;
+;    |jk_ff:JKFF|            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_FF|jk_ff:JKFF ; jk_ff        ; work         ;
+;    |t_ff:TFF|              ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_FF|t_ff:TFF   ; t_ff         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -270,35 +270,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 30 11:49:27 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Tue Nov  5 18:07:16 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE10_LITE_FF -c DE10_LITE_FF
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_ff/src/d_ff.vhd
-    Info (12022): Found design unit 1: d_ff-dff_module File: C:/Users/14611432/Documents/DE10_LITE_FF/src/d_ff.vhd Line: 14
-    Info (12023): Found entity 1: d_ff File: C:/Users/14611432/Documents/DE10_LITE_FF/src/d_ff.vhd Line: 3
-Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_ff/src/jk_ff.vhd
-    Info (12022): Found design unit 1: jk_ff-jkff_module File: C:/Users/14611432/Documents/DE10_LITE_FF/src/jk_ff.vhd Line: 13
-    Info (12023): Found entity 1: jk_ff File: C:/Users/14611432/Documents/DE10_LITE_FF/src/jk_ff.vhd Line: 3
-Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_ff/src/t_ff.vhd
-    Info (12022): Found design unit 1: t_ff-tff_module File: C:/Users/14611432/Documents/DE10_LITE_FF/src/t_ff.vhd Line: 13
-    Info (12023): Found entity 1: t_ff File: C:/Users/14611432/Documents/DE10_LITE_FF/src/t_ff.vhd Line: 3
-Info (12021): Found 2 design units, including 1 entities, in source file /users/14611432/documents/de10_lite_ff/src/de10_lite_ff.vhd
-    Info (12022): Found design unit 1: DE10_LITE_FF-top File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 12
-    Info (12023): Found entity 1: DE10_LITE_FF File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 3
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp7/de10_lite_ff/src/d_ff.vhd
+    Info (12022): Found design unit 1: d_ff-dff_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/d_ff.vhd Line: 18
+    Info (12023): Found entity 1: d_ff File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/d_ff.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp7/de10_lite_ff/src/jk_ff.vhd
+    Info (12022): Found design unit 1: jk_ff-jkff_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/jk_ff.vhd Line: 17
+    Info (12023): Found entity 1: jk_ff File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/jk_ff.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp7/de10_lite_ff/src/t_ff.vhd
+    Info (12022): Found design unit 1: t_ff-tff_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/t_ff.vhd Line: 17
+    Info (12023): Found entity 1: t_ff File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/t_ff.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp7/de10_lite_ff/src/de10_lite_ff.vhd
+    Info (12022): Found design unit 1: DE10_LITE_FF-top File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 17
+    Info (12023): Found entity 1: DE10_LITE_FF File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
 Info (12127): Elaborating entity "DE10_LITE_FF" for the top level hierarchy
-Info (12128): Elaborating entity "d_ff" for hierarchy "d_ff:D_FF" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 15
-Info (12128): Elaborating entity "jk_ff" for hierarchy "jk_ff:JK_FF" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 21
-Info (12128): Elaborating entity "t_ff" for hierarchy "t_ff:T_FF" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 27
+Info (12128): Elaborating entity "jk_ff" for hierarchy "jk_ff:JKFF" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 21
+Info (12128): Elaborating entity "d_ff" for hierarchy "d_ff:DFF" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 28
+Info (12128): Elaborating entity "t_ff" for hierarchy "t_ff:TFF" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 35
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 8
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 13
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 13
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 13
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 13
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 13
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 13
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 185 assignments for entity "DE10_LITE_FULL" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_FULL was ignored
@@ -489,20 +489,20 @@ Warning (20013): Ignored 185 assignments for entity "DE10_LITE_FULL" -- entity d
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 6
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 6
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 6
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 6
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 6
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/14611432/Documents/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 6
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 11
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp7/DE10_LITE_FF/src/DE10_LITE_FF.vhd Line: 11
 Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 202 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Wed Oct 30 11:49:35 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 4864 megabytes
+    Info: Processing ended: Tue Nov  5 18:07:23 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 

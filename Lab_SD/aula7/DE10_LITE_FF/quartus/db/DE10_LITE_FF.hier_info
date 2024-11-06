@@ -1,40 +1,33 @@
 |DE10_LITE_FF
-SW[0] => ~NO_FANOUT~
-SW[1] => d_ff:D_FF.d
-SW[2] => jk_ff:JK_FF.k
-SW[3] => jk_ff:JK_FF.j
+SW[0] => t_ff:TFF.t
+SW[1] => d_ff:DFF.d
+SW[2] => jk_ff:JKFF.k
+SW[3] => jk_ff:JKFF.j
 SW[4] => ~NO_FANOUT~
 SW[5] => ~NO_FANOUT~
 SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
-SW[9] => t_ff:T_FF.t
-KEY[0] => d_ff:D_FF.clk
-KEY[0] => jk_ff:JK_FF.clk
-KEY[0] => t_ff:T_FF.clk
-KEY[1] => d_ff:D_FF.cr
-KEY[1] => jk_ff:JK_FF.cr
-KEY[1] => t_ff:T_FF.cr
-LEDR[0] <= <GND>
-LEDR[1] <= jk_ff:JK_FF.q
-LEDR[2] <= d_ff:D_FF.q
+SW[9] => ~NO_FANOUT~
+KEY[0] => jk_ff:JKFF.clk
+KEY[0] => d_ff:DFF.clk
+KEY[0] => t_ff:TFF.clk
+KEY[1] => jk_ff:JKFF.cr
+KEY[1] => d_ff:DFF.cr
+KEY[1] => t_ff:TFF.cr
+LEDR[0] <= t_ff:TFF.q
+LEDR[1] <= d_ff:DFF.q
+LEDR[2] <= jk_ff:JKFF.q
 LEDR[3] <= <GND>
 LEDR[4] <= <GND>
 LEDR[5] <= <GND>
 LEDR[6] <= <GND>
 LEDR[7] <= <GND>
 LEDR[8] <= <GND>
-LEDR[9] <= t_ff:T_FF.q
+LEDR[9] <= <GND>
 
 
-|DE10_LITE_FF|d_ff:D_FF
-clk => q~reg0.CLK
-cr => q~reg0.ACLR
-d => q~reg0.DATAIN
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DE10_LITE_FF|jk_ff:JK_FF
+|DE10_LITE_FF|jk_ff:JKFF
 cr => qs.ACLR
 j => qs.IN1
 k => qs.IN1
@@ -42,7 +35,14 @@ clk => qs.CLK
 q <= qs.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DE10_LITE_FF|t_ff:T_FF
+|DE10_LITE_FF|d_ff:DFF
+clk => q~reg0.CLK
+cr => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_FF|t_ff:TFF
 cr => qs.ACLR
 t => qs.IN1
 t => qs.IN1
