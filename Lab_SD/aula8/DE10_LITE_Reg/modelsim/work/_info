@@ -1,0 +1,124 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/modelsim
+Ed_ff
+Z1 w1730991154
+!i122 8
+R0
+Z2 8C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/d_ff.vhd
+Z3 FC:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/d_ff.vhd
+l0
+L6 1
+V<1L3KzY4`IT7:RFHL<DU61
+!s100 0fe4z8`2[c84`[U0@e`C71
+Z4 OV;C;2020.1;71
+32
+Z5 !s110 1730991542
+!i10b 1
+Z6 !s108 1730991542.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/d_ff.vhd|
+Z8 !s107 C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/d_ff.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Adff_module
+Z11 DEx4 work 4 d_ff 0 22 <1L3KzY4`IT7:RFHL<DU61
+!i122 8
+l20
+L17 16
+V@bi7U0aXC23^<1Lze4IDe2
+!s100 fAEhek5nBZNglFnVP@0ni0
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Ede10_lite_reg
+R1
+!i122 10
+R0
+Z12 8C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/DE10_LITE_Reg.vhd
+Z13 FC:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/DE10_LITE_Reg.vhd
+l0
+L6 1
+Vb72eFk]4GQd^m[?U_H75f1
+!s100 7eAVm^4ADE@C8GKB>Z=3a1
+R4
+32
+Z14 !s110 1730991543
+!i10b 1
+Z15 !s108 1730991543.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/DE10_LITE_Reg.vhd|
+Z17 !s107 C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/DE10_LITE_Reg.vhd|
+!i113 1
+R9
+R10
+Ainterface
+Z18 DEx4 work 3 reg 0 22 L>5fdY95djeeJm_7LS9;11
+DEx4 work 13 de10_lite_reg 0 22 b72eFk]4GQd^m[?U_H75f1
+!i122 10
+l15
+L14 8
+VEOjzVzc1RVNoiaWGbQJc33
+!s100 <6kT1`2FUaTXc3SeZY=[m3
+R4
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R9
+R10
+Ereg
+Z19 w1730991199
+!i122 9
+R0
+Z20 8C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/Reg.vhd
+Z21 FC:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/Reg.vhd
+l0
+L6 1
+VL>5fdY95djeeJm_7LS9;11
+!s100 `2=2_nVP1YLNQ[W5K^`zT0
+R4
+32
+R14
+!i10b 1
+R6
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/Reg.vhd|
+Z23 !s107 C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/Reg.vhd|
+!i113 1
+R9
+R10
+Aestrutural
+R11
+R18
+!i122 9
+l19
+L15 18
+VMI<f41Y?^?BoJFR^@d;[A1
+!s100 4>Yf4f@]J@e46KU6c@I5S1
+R4
+32
+R14
+!i10b 1
+R6
+R22
+R23
+!i113 1
+R9
+R10

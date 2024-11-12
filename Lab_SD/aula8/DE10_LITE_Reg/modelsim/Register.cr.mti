@@ -1,0 +1,21 @@
+C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/Reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity Reg
+-- Compiling architecture estrutural of Reg
+-- Loading entity d_ff
+
+} {} {}} C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/d_ff.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/d_ff.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity d_ff
+-- Compiling architecture dff_module of d_ff
+
+} {} {}} C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/DE10_LITE_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Gabriel/Documents/Grad/exp8/DE10_LITE_Reg/src/DE10_LITE_Reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity DE10_LITE_Reg
+-- Compiling architecture interface of DE10_LITE_Reg
+-- Loading entity Reg
+
+} {} {}}
