@@ -1,0 +1,2 @@
+force -freeze sim:/counter/clk 1 0, 0 {100 ps} -r 200
+force -freeze sim:/counter/clrn 0 0

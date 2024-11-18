@@ -1,0 +1,15 @@
+--oi 2
+
+ENTITY DE10_LITE_counter IS 
+	PORT (
+		KEY : IN BIT_VECTOR(1 DOWNTO 0);
+		LEDR: IN BIT_VECTOR(9 DOWNTO 0));
+		
+END DE10_LITE_counter;
+
+ARCHITECTURE interface OF DE10_LITE_counter IS
+BEGIN
+	count: entity work.counter
+		GENERIC MAP(n => 4)
+		PORT MAP(clk => KEY(0), clrn => KEY(1), Q => LEDR(n-1 DOWNTO 0));
+END interface;

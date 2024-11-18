@@ -1,0 +1,122 @@
+|DE10_LITE_counter
+KEY[0] => counter:count.clk
+KEY[1] => counter:count.clrn
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= counter:count.Q[0]
+LEDR[7] <= counter:count.Q[1]
+LEDR[8] <= counter:count.Q[2]
+LEDR[9] <= counter:count.Q[3]
+HEX0[0] <= hex27seg:display.segments[0]
+HEX0[1] <= hex27seg:display.segments[1]
+HEX0[2] <= hex27seg:display.segments[2]
+HEX0[3] <= hex27seg:display.segments[3]
+HEX0[4] <= hex27seg:display.segments[4]
+HEX0[5] <= hex27seg:display.segments[5]
+HEX0[6] <= hex27seg:display.segments[6]
+HEX0[7] <= hex27seg:display.segments[7]
+
+
+|DE10_LITE_counter|counter:count
+clk => jk_ff:FF0.clk
+clk => jk_ff:abc:1:FF.clk
+clk => jk_ff:abc:2:FF.clk
+clk => jk_ff:abc:3:FF.clk
+clrn => jk_ff:FF0.cr
+clrn => jk_ff:abc:1:FF.cr
+clrn => jk_ff:abc:2:FF.cr
+clrn => jk_ff:abc:3:FF.cr
+Q[0] <= jk_ff:FF0.q
+Q[1] <= jk_ff:abc:1:FF.q
+Q[2] <= jk_ff:abc:2:FF.q
+Q[3] <= jk_ff:abc:3:FF.q
+
+
+|DE10_LITE_counter|counter:count|jk_ff:FF0
+cr => qs.ACLR
+j => qs.IN1
+k => qs.IN1
+clk => qs.CLK
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_counter|counter:count|jk_ff:\abc:1:FF
+cr => qs.ACLR
+j => qs.IN1
+k => qs.IN1
+clk => qs.CLK
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_counter|counter:count|jk_ff:\abc:2:FF
+cr => qs.ACLR
+j => qs.IN1
+k => qs.IN1
+clk => qs.CLK
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_counter|counter:count|jk_ff:\abc:3:FF
+cr => qs.ACLR
+j => qs.IN1
+k => qs.IN1
+clk => qs.CLK
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_counter|hex27seg:display
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN0
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[0] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[1] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[1] => segments.IN1
+hexa[1] => segments.IN1
+hexa[1] => segments.IN0
+hexa[1] => segments.IN1
+hexa[2] => segments.IN1
+hexa[2] => segments.IN0
+hexa[2] => segments.IN0
+hexa[2] => segments.IN0
+hexa[2] => segments.IN1
+hexa[2] => segments.IN0
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+hexa[3] => segments.IN1
+segments[0] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[7] <= <VCC>
+
+
