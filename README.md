@@ -1,4 +1,4 @@
-# Mi-repository
+# My-repository
 ![joinha](https://github.com/user-attachments/assets/d77060d7-006e-4b6b-8b38-bf6304b90b90)
 
 ## Repositório da gradução
