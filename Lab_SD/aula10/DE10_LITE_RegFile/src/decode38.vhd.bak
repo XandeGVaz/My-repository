@@ -1,0 +1,47 @@
+-- Version: 1.1
+-- Date: --/11/2024
+-- Owners: Gabriel D. Maruschi
+--			  Vitor Alexandre Garcia Vaz
+
+ENTITY decode38 is
+
+    PORt (
+        ENT      : IN BIT_VECTOR (3 downto 0);
+        OUTPUT0  : OUT BIT;
+        OUTPUT1  : OUT BIT;
+        OUTPUT2  : OUT BIT;
+        OUTPUT3  : OUT BIT;
+        OUTPUT4  : OUT BIT;
+        OUTPUT5  : OUT BIT;
+        OUTPUT6  : OUT BIT;
+        OUTPUT7  : OUT BIT;
+    );
+end decode38;
+
+
+ARCHITECTURE estrutural OF decode38 IS
+
+    signal aux  : BIT_VECTOR [7 downto 0];
+
+BEGIN
+
+	with S select
+	aux <= 	"10000000" when "000",
+            "01000000" when "001",
+            "00100000" when "010",
+            "00010000" when "011",
+            "00001000" when "100",
+            "00000100" when "101",
+            "00000010" when "110",
+            "00000001" when "111";
+    
+    OUTPUT0 <= aux(0);
+    OUTPUT1 <= aux(1);
+    OUTPUT2 <= aux(2);
+    OUTPUT3 <= aux(3);
+    OUTPUT4 <= aux(4);
+    OUTPUT5 <= aux(5);
+    OUTPUT6 <= aux(6);
+    OUTPUT7 <= aux(7);
+
+END estrutural;

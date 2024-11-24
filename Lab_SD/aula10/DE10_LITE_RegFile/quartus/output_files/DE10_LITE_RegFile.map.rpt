@@ -1,0 +1,768 @@
+Analysis & Synthesis report for DE10_LITE_RegFile
+Sun Nov 24 11:03:22 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: regbank:RegBank
+ 11. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:0:reg
+ 12. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:1:reg
+ 13. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:2:reg
+ 14. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:3:reg
+ 15. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:4:reg
+ 16. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:5:reg
+ 17. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:6:reg
+ 18. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:7:reg
+ 19. Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux1
+ 20. Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux2
+ 21. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:7:reg"
+ 22. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:6:reg"
+ 23. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:5:reg"
+ 24. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:4:reg"
+ 25. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:3:reg"
+ 26. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:2:reg"
+ 27. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:1:reg"
+ 28. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:0:reg"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 24 11:03:21 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                      ; DE10_LITE_RegFile                              ;
+; Top-level Entity Name              ; DE10_LITE_RegFile                              ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 82                                             ;
+;     Total combinational functions  ; 50                                             ;
+;     Dedicated logic registers      ; 32                                             ;
+; Total registers                    ; 32                                             ;
+; Total pins                         ; 22                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; DE10_LITE_RegFile  ; DE10_LITE_RegFile  ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; ../src/Reg.vhd                   ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd               ;         ;
+; ../src/d_ff.vhd                  ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/d_ff.vhd              ;         ;
+; ../src/regbank.vhd               ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd           ;         ;
+; ../src/mux81.vhd                 ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/mux81.vhd             ;         ;
+; ../src/decode38.vhd              ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd          ;         ;
+; ../src/DE10_LITE_RegFile.vhd     ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 82          ;
+;                                             ;             ;
+; Total combinational functions               ; 50          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 34          ;
+;     -- 3 input functions                    ; 16          ;
+;     -- <=2 input functions                  ; 0           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 50          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 32          ;
+;     -- Dedicated logic registers            ; 32          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 22          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[7]~input ;
+; Maximum fan-out                             ; 16          ;
+; Total fan-out                               ; 278         ;
+; Average fan-out                             ; 2.21        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                          ; Entity Name       ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------+-------------------+--------------+
+; |DE10_LITE_RegFile              ; 50 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |DE10_LITE_RegFile                                                           ; DE10_LITE_RegFile ; work         ;
+;    |regbank:RegBank|            ; 50 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank                                           ; regbank           ; work         ;
+;       |Reg:\registers:0:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |Reg:\registers:1:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:1:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:1:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:1:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:1:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:1:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |Reg:\registers:2:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:2:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:2:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:2:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:2:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:2:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |Reg:\registers:3:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |Reg:\registers:4:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |Reg:\registers:5:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |Reg:\registers:6:reg|    ; 2 (2)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |Reg:\registers:7:reg|    ; 2 (2)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg                      ; Reg               ; work         ;
+;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
+;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
+;       |mux81:mux1|              ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux1                                ; mux81             ; work         ;
+;       |mux81:mux2|              ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux2                                ; mux81             ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux1|Mux3 ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux2|Mux3 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; m              ; 8     ; Signed Integer                      ;
+; x              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:0:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:1:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:2:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:3:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:4:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:5:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:6:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:7:reg ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux2 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:7:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:6:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:5:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:4:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:3:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:2:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:1:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:0:reg" ;
++------+-------+----------+----------------------------------------+
+; Port ; Type  ; Severity ; Details                                ;
++------+-------+----------+----------------------------------------+
+; cr   ; Input ; Info     ; Stuck at GND                           ;
++------+-------+----------+----------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 32                          ;
+;     plain             ; 32                          ;
+; cycloneiii_lcell_comb ; 51                          ;
+;     normal            ; 51                          ;
+;         0 data inputs ; 1                           ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 34                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.56                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Sun Nov 24 11:03:14 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE10_LITE_RegFile -c DE10_LITE_RegFile
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/reg.vhd
+    Info (12022): Found design unit 1: Reg-estrutural File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd Line: 20
+    Info (12023): Found entity 1: Reg File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/d_ff.vhd
+    Info (12022): Found design unit 1: d_ff-dff_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/d_ff.vhd Line: 22
+    Info (12023): Found entity 1: d_ff File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/d_ff.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/regbank.vhd
+    Info (12022): Found design unit 1: regbank-estrutural File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 29
+    Info (12023): Found entity 1: regbank File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/mux81.vhd
+    Info (12022): Found design unit 1: mux81-mux81_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/mux81.vhd Line: 31
+    Info (12023): Found entity 1: mux81 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/mux81.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/decode38.vhd
+    Info (12022): Found design unit 1: decode38-decode38_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 27
+    Info (12023): Found entity 1: decode38 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/de10_lite_regfile.vhd
+    Info (12022): Found design unit 1: DE10_LITE_RegFile-estrutural File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 20
+    Info (12023): Found entity 1: DE10_LITE_RegFile File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 11
+Info (12127): Elaborating entity "DE10_LITE_RegFile" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at DE10_LITE_RegFile.vhd(15) File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
+Info (12128): Elaborating entity "regbank" for hierarchy "regbank:RegBank" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 23
+Info (12128): Elaborating entity "decode38" for hierarchy "regbank:RegBank|decode38:decoder" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 43
+Info (12128): Elaborating entity "Reg" for hierarchy "regbank:RegBank|Reg:\registers:0:reg" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 59
+Info (12128): Elaborating entity "d_ff" for hierarchy "regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:0:FF" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd Line: 30
+Info (12128): Elaborating entity "mux81" for hierarchy "regbank:RegBank|mux81:mux1" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 70
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux0 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux1 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux2 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux3 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux4 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux5 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux6 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux7 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 185 assignments for entity "DE10_LITE_FULL" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[10] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[11] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[12] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[13] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[14] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[15] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[8] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[9] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to ARDUINO_RESET_N -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_CS_N -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_INT[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SCLK -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDI -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GSENSOR_SDO -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK1_50 -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50 -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[10] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[11] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[12] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[13] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[14] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[15] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[16] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[17] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[18] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[19] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[20] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[21] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[22] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[23] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[24] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[25] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[26] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[27] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[28] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[29] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[30] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[31] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[32] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[33] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[34] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[35] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[8] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SA_GPIO[9] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3] -entity DE10_LITE_FULL was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE10_LITE_FULL was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 82 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 200 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Sun Nov 24 11:03:22 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
+
+
