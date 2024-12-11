@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE10_LITE_RegFile
-Sun Nov 24 11:03:22 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Wed Nov 27 11:18:13 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -20,30 +20,23 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  12. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:1:reg
  13. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:2:reg
  14. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:3:reg
- 15. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:4:reg
- 16. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:5:reg
- 17. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:6:reg
- 18. Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:7:reg
- 19. Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux1
- 20. Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux2
- 21. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:7:reg"
- 22. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:6:reg"
- 23. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:5:reg"
- 24. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:4:reg"
- 25. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:3:reg"
- 26. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:2:reg"
- 27. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:1:reg"
- 28. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:0:reg"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 15. Parameter Settings for User Entity Instance: regbank:RegBank|mux41:mux1
+ 16. Parameter Settings for User Entity Instance: regbank:RegBank|mux41:mux2
+ 17. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:3:reg"
+ 18. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:2:reg"
+ 19. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:1:reg"
+ 20. Port Connectivity Checks: "regbank:RegBank|Reg:\registers:0:reg"
+ 21. Port Connectivity Checks: "regbank:RegBank"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -60,26 +53,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 24 11:03:21 2024          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                      ; DE10_LITE_RegFile                              ;
-; Top-level Entity Name              ; DE10_LITE_RegFile                              ;
-; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 82                                             ;
-;     Total combinational functions  ; 50                                             ;
-;     Dedicated logic registers      ; 32                                             ;
-; Total registers                    ; 32                                             ;
-; Total pins                         ; 22                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-; UFM blocks                         ; 0                                              ;
-; ADC blocks                         ; 0                                              ;
-+------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 27 11:18:13 2024       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; DE10_LITE_RegFile                           ;
+; Top-level Entity Name              ; DE10_LITE_RegFile                           ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 50                                          ;
+;     Total combinational functions  ; 34                                          ;
+;     Dedicated logic registers      ; 16                                          ;
+; Total registers                    ; 16                                          ;
+; Total pins                         ; 38                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -173,8 +166,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -184,50 +177,51 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; ../src/Reg.vhd                   ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd               ;         ;
-; ../src/d_ff.vhd                  ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/d_ff.vhd              ;         ;
-; ../src/regbank.vhd               ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd           ;         ;
-; ../src/mux81.vhd                 ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/mux81.vhd             ;         ;
-; ../src/decode38.vhd              ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd          ;         ;
-; ../src/DE10_LITE_RegFile.vhd     ; yes             ; User VHDL File  ; C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; ../src/Reg.vhd                   ; yes             ; User VHDL File  ; C:/Users/14571525/Documents/DE10_LITE_RegFile/src/Reg.vhd               ;         ;
+; ../src/d_ff.vhd                  ; yes             ; User VHDL File  ; C:/Users/14571525/Documents/DE10_LITE_RegFile/src/d_ff.vhd              ;         ;
+; ../src/regbank.vhd               ; yes             ; User VHDL File  ; C:/Users/14571525/Documents/DE10_LITE_RegFile/src/regbank.vhd           ;         ;
+; ../src/DE10_LITE_RegFile.vhd     ; yes             ; User VHDL File  ; C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd ;         ;
+; ../src/mux41.vhd                 ; yes             ; User VHDL File  ; C:/Users/14571525/Documents/DE10_LITE_RegFile/src/mux41.vhd             ;         ;
+; ../src/decode24.vhd              ; yes             ; User VHDL File  ; C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode24.vhd          ;         ;
+; ../src/hex27seg.vhd              ; yes             ; User VHDL File  ; C:/Users/14571525/Documents/DE10_LITE_RegFile/src/hex27seg.vhd          ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 82          ;
-;                                             ;             ;
-; Total combinational functions               ; 50          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 34          ;
-;     -- 3 input functions                    ; 16          ;
-;     -- <=2 input functions                  ; 0           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 50          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 32          ;
-;     -- Dedicated logic registers            ; 32          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 22          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; SW[7]~input ;
-; Maximum fan-out                             ; 16          ;
-; Total fan-out                               ; 278         ;
-; Average fan-out                             ; 2.21        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimated Total logic elements              ; 50                                ;
+;                                             ;                                   ;
+; Total combinational functions               ; 34                                ;
+; Logic element usage by number of LUT inputs ;                                   ;
+;     -- 4 input functions                    ; 34                                ;
+;     -- 3 input functions                    ; 0                                 ;
+;     -- <=2 input functions                  ; 0                                 ;
+;                                             ;                                   ;
+; Logic elements by mode                      ;                                   ;
+;     -- normal mode                          ; 34                                ;
+;     -- arithmetic mode                      ; 0                                 ;
+;                                             ;                                   ;
+; Total registers                             ; 16                                ;
+;     -- Dedicated logic registers            ; 16                                ;
+;     -- I/O registers                        ; 0                                 ;
+;                                             ;                                   ;
+; I/O pins                                    ; 38                                ;
+;                                             ;                                   ;
+; Embedded Multiplier 9-bit elements          ; 0                                 ;
+;                                             ;                                   ;
+; Maximum fan-out node                        ; regbank:RegBank|mux41:mux1|Mux3~1 ;
+; Maximum fan-out                             ; 8                                 ;
+; Total fan-out                               ; 228                               ;
+; Average fan-out                             ; 1.81                              ;
++---------------------------------------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -235,8 +229,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                          ; Entity Name       ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------+-------------------+--------------+
-; |DE10_LITE_RegFile              ; 50 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |DE10_LITE_RegFile                                                           ; DE10_LITE_RegFile ; work         ;
-;    |regbank:RegBank|            ; 50 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank                                           ; regbank           ; work         ;
+; |DE10_LITE_RegFile              ; 34 (0)              ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 38   ; 0            ; 0          ; |DE10_LITE_RegFile                                                           ; DE10_LITE_RegFile ; work         ;
+;    |hex27seg:display1|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|hex27seg:display1                                         ; hex27seg          ; work         ;
+;    |hex27seg:display2|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|hex27seg:display2                                         ; hex27seg          ; work         ;
+;    |regbank:RegBank|            ; 20 (0)              ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank                                           ; regbank           ; work         ;
 ;       |Reg:\registers:0:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg                      ; Reg               ; work         ;
 ;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
 ;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
@@ -257,28 +253,8 @@ https://fpgasoftware.intel.com/eula.
 ;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
 ;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
 ;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:3:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
-;       |Reg:\registers:4:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg                      ; Reg               ; work         ;
-;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:4:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
-;       |Reg:\registers:5:reg|    ; 1 (1)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg                      ; Reg               ; work         ;
-;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:5:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
-;       |Reg:\registers:6:reg|    ; 2 (2)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg                      ; Reg               ; work         ;
-;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:6:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
-;       |Reg:\registers:7:reg|    ; 2 (2)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg                      ; Reg               ; work         ;
-;          |d_ff:\regis_gen:0:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:0:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:1:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:1:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:2:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:2:FF ; d_ff              ; work         ;
-;          |d_ff:\regis_gen:3:FF| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|Reg:\registers:7:reg|d_ff:\regis_gen:3:FF ; d_ff              ; work         ;
-;       |mux81:mux1|              ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux1                                ; mux81             ; work         ;
-;       |mux81:mux2|              ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux2                                ; mux81             ; work         ;
+;       |mux41:mux1|              ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|mux41:mux1                                ; mux41             ; work         ;
+;       |mux41:mux2|              ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_RegFile|regbank:RegBank|mux41:mux2                                ; mux41             ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -288,7 +264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 32    ;
+; Total registers                              ; 16    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -303,8 +279,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux1|Mux3 ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_RegFile|regbank:RegBank|mux81:mux2|Mux3 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE10_LITE_RegFile|regbank:RegBank|mux41:mux1|Mux2 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE10_LITE_RegFile|regbank:RegBank|mux41:mux2|Mux2 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
@@ -313,7 +289,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
-; m              ; 8     ; Signed Integer                      ;
+; m              ; 4     ; Signed Integer                      ;
 ; x              ; 4     ; Signed Integer                      ;
 +----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -359,48 +335,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:4:reg ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; n              ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:5:reg ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; n              ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:6:reg ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; n              ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regbank:RegBank|Reg:\registers:7:reg ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; n              ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux1 ;
+; Parameter Settings for User Entity Instance: regbank:RegBank|mux41:mux1 ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
@@ -410,49 +346,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: regbank:RegBank|mux81:mux2 ;
+; Parameter Settings for User Entity Instance: regbank:RegBank|mux41:mux2 ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 4     ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:7:reg" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; cr   ; Input ; Info     ; Stuck at GND                           ;
-+------+-------+----------+----------------------------------------+
-
-
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:6:reg" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; cr   ; Input ; Info     ; Stuck at GND                           ;
-+------+-------+----------+----------------------------------------+
-
-
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:5:reg" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; cr   ; Input ; Info     ; Stuck at GND                           ;
-+------+-------+----------+----------------------------------------+
-
-
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "regbank:RegBank|Reg:\registers:4:reg" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; cr   ; Input ; Info     ; Stuck at GND                           ;
-+------+-------+----------+----------------------------------------+
 
 
 +------------------------------------------------------------------+
@@ -491,22 +391,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------+
 
 
++---------------------------------------------+
+; Port Connectivity Checks: "regbank:RegBank" ;
++------+-------+----------+-------------------+
+; Port ; Type  ; Severity ; Details           ;
++------+-------+----------+-------------------+
+; en   ; Input ; Info     ; Stuck at VCC      ;
++------+-------+----------+-------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 32                          ;
-;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 51                          ;
-;     normal            ; 51                          ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 16                          ;
+; boundary_port         ; 38                          ;
+; cycloneiii_ff         ; 16                          ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 38                          ;
+;     normal            ; 38                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
 ;         4 data inputs ; 34                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.56                        ;
+; Average LUT depth     ; 2.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -524,48 +433,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Nov 24 11:03:14 2024
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Nov 27 11:18:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE10_LITE_RegFile -c DE10_LITE_RegFile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/reg.vhd
-    Info (12022): Found design unit 1: Reg-estrutural File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd Line: 20
-    Info (12023): Found entity 1: Reg File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/d_ff.vhd
-    Info (12022): Found design unit 1: d_ff-dff_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/d_ff.vhd Line: 22
-    Info (12023): Found entity 1: d_ff File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/d_ff.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/regbank.vhd
-    Info (12022): Found design unit 1: regbank-estrutural File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 29
-    Info (12023): Found entity 1: regbank File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/mux81.vhd
-    Info (12022): Found design unit 1: mux81-mux81_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/mux81.vhd Line: 31
-    Info (12023): Found entity 1: mux81 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/mux81.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/decode38.vhd
-    Info (12022): Found design unit 1: decode38-decode38_module File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 27
-    Info (12023): Found entity 1: decode38 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/vitor/documents/eng_comp/4_semestre/lab_sistemas_digitais/aulas/exp10/de10_lite_regfile/src/de10_lite_regfile.vhd
-    Info (12022): Found design unit 1: DE10_LITE_RegFile-estrutural File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 20
-    Info (12023): Found entity 1: DE10_LITE_RegFile File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 11
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/reg.vhd
+    Info (12022): Found design unit 1: Reg-estrutural File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/Reg.vhd Line: 20
+    Info (12023): Found entity 1: Reg File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/Reg.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/d_ff.vhd
+    Info (12022): Found design unit 1: d_ff-dff_module File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/d_ff.vhd Line: 22
+    Info (12023): Found entity 1: d_ff File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/d_ff.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/regbank.vhd
+    Info (12022): Found design unit 1: regbank-estrutural File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/regbank.vhd Line: 29
+    Info (12023): Found entity 1: regbank File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/regbank.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/mux81.vhd
+    Info (12022): Found design unit 1: mux81-mux81_module File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/mux81.vhd Line: 31
+    Info (12023): Found entity 1: mux81 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/mux81.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/decode38.vhd
+    Info (12022): Found design unit 1: decode38-decode38_module File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode38.vhd Line: 27
+    Info (12023): Found entity 1: decode38 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode38.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/de10_lite_regfile.vhd
+    Info (12022): Found design unit 1: DE10_LITE_RegFile-estrutural File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 22
+    Info (12023): Found entity 1: DE10_LITE_RegFile File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 11
+Warning (12090): Entity "mux41" obtained from "../src/mux41.vhd" instead of from Quartus Prime megafunction library File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/mux41.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/mux41.vhd
+    Info (12022): Found design unit 1: mux41-mux41_module File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/mux41.vhd Line: 27
+    Info (12023): Found entity 1: mux41 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/mux41.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/decode24.vhd
+    Info (12022): Found design unit 1: decode24-decode24_module File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode24.vhd Line: 23
+    Info (12023): Found entity 1: decode24 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode24.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/14571525/documents/de10_lite_regfile/src/hex27seg.vhd
+    Info (12022): Found design unit 1: hex27seg-logica File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/hex27seg.vhd Line: 22
+    Info (12023): Found entity 1: hex27seg File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/hex27seg.vhd Line: 14
 Info (12127): Elaborating entity "DE10_LITE_RegFile" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at DE10_LITE_RegFile.vhd(15) File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
-Info (12128): Elaborating entity "regbank" for hierarchy "regbank:RegBank" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 23
-Info (12128): Elaborating entity "decode38" for hierarchy "regbank:RegBank|decode38:decoder" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 43
-Info (12128): Elaborating entity "Reg" for hierarchy "regbank:RegBank|Reg:\registers:0:reg" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 59
-Info (12128): Elaborating entity "d_ff" for hierarchy "regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:0:FF" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/Reg.vhd Line: 30
-Info (12128): Elaborating entity "mux81" for hierarchy "regbank:RegBank|mux81:mux1" File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/regbank.vhd Line: 70
+Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at DE10_LITE_RegFile.vhd(15) File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
+Info (12128): Elaborating entity "regbank" for hierarchy "regbank:RegBank" File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 28
+Info (12128): Elaborating entity "decode24" for hierarchy "regbank:RegBank|decode24:decoder" File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/regbank.vhd Line: 43
+Info (12128): Elaborating entity "Reg" for hierarchy "regbank:RegBank|Reg:\registers:0:reg" File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/regbank.vhd Line: 55
+Info (12128): Elaborating entity "d_ff" for hierarchy "regbank:RegBank|Reg:\registers:0:reg|d_ff:\regis_gen:0:FF" File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/Reg.vhd Line: 30
+Info (12128): Elaborating entity "mux41" for hierarchy "regbank:RegBank|mux41:mux1" File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/regbank.vhd Line: 66
+Info (12128): Elaborating entity "hex27seg" for hierarchy "hex27seg:display1" File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 47
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux0 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux1 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux2 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux3 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux4 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux5 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux6 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
-    Warning (19017): Found clock multiplexer regbank:RegBank|decode38:decoder|Mux7 File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/decode38.vhd Line: 33
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode24:decoder|Mux3 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode24.vhd Line: 28
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode24:decoder|Mux2 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode24.vhd Line: 28
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode24:decoder|Mux1 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode24.vhd Line: 28
+    Warning (19017): Found clock multiplexer regbank:RegBank|decode24:decoder|Mux0 File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/decode24.vhd Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/VITOR/Documents/Eng_Comp/4_semestre/Lab_Sistemas_digitais/Aulas/Exp10/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 15
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 16
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/14571525/Documents/DE10_LITE_RegFile/src/DE10_LITE_RegFile.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 185 assignments for entity "DE10_LITE_FULL" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_FULL was ignored
@@ -755,14 +673,14 @@ Warning (20013): Ignored 185 assignments for entity "DE10_LITE_FULL" -- entity d
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE10_LITE_FULL was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 88 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 82 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 200 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Sun Nov 24 11:03:22 2024
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 50 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 199 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Wed Nov 27 11:18:13 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:10
 
 

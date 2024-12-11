@@ -5,11 +5,17 @@
 -- Owners:	Gabriel Dezejácomo Maruschi
 --				Vitor Alexandre Garcia Vaz
 
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+
 entity hex27seg is
 	port
 	(
-		hexa 		: in bit_vector(3 downto 0);	--entrada de 4 bits
-		segments	: out bit_vector(7 downto 0)	--Display
+		hexa 		: in STD_LOGIC_VECTOR(3 downto 0);	--entrada de 4 bits
+		segments	: out STD_LOGIC_VECTOR(7 downto 0)	--Display
 	);
 end hex27seg;
 

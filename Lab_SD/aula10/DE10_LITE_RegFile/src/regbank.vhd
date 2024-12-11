@@ -10,7 +10,7 @@ USE ieee.std_logic_unsigned.ALL; -- operações aritméticas com std_logic_vecto
 
 ENTITY regbank IS
     GENERIC (
-        M : INTEGER := 8; -- Número de registradores
+        M : INTEGER := 4; -- Número de registradores
         X : INTEGER := 4  -- Largura de cada registrador
     );
     PORT (
@@ -18,9 +18,9 @@ ENTITY regbank IS
         EN : IN std_logic; -- Habilita o banco de registradores
         WE3 : IN std_logic; -- Habilita a escrita
         WD3 : IN std_logic_vector(X-1 DOWNTO 0); -- Dados a serem escritos
-        A1 : IN std_logic_vector(2 DOWNTO 0); -- Seleção do registrador 1 para leitura
-        A2 : IN std_logic_vector(2 DOWNTO 0); -- Seleção do registrador 2 para leitura
-        A3 : IN std_logic_vector(2 DOWNTO 0); -- Seleção do registrador para escrita
+        A1 : IN std_logic_vector(1 DOWNTO 0); -- Seleção do registrador 1 para leitura
+        A2 : IN std_logic_vector(1 DOWNTO 0); -- Seleção do registrador 2 para leitura
+        A3 : IN std_logic_vector(1 DOWNTO 0); -- Seleção do registrador para escrita
         RD1 : OUT std_logic_vector(X-1 DOWNTO 0); -- Saída do registrador 1
         RD2 : OUT std_logic_vector(X-1 DOWNTO 0) -- Saída do registrador 2
     );
@@ -40,17 +40,13 @@ ARCHITECTURE estrutural OF regbank IS
 BEGIN
 	
 	-- Decoder 1 : M
-	decoder: entity work.decode38
+	decoder: entity work.decode24 
         PORT MAP(
             ENT => A3,
             OUTPUT0 => outDecoder(0),
             OUTPUT1 => outDecoder(1),
             OUTPUT2 => outDecoder(2),
-            OUTPUT3 => outDecoder(3),
-            OUTPUT4 => outDecoder(4),
-            OUTPUT5 => outDecoder(5),
-            OUTPUT6 => outDecoder(6),
-            OUTPUT7 => outDecoder(7)
+            OUTPUT3 => outDecoder(3)
         );
 
     -- Banco de M registradores
@@ -67,30 +63,22 @@ BEGIN
     END generate registers;
 
     -- Multiplexadores M : 1
-    mux1: entity work.mux81
+    mux1: entity work.mux41
         PORT MAP(
             INPUT0 => outRegister(0),
             INPUT1 => outRegister(1),
             INPUT2 => outRegister(2),
             INPUT3 => outRegister(3),
-            INPUT4 => outRegister(4),
-            INPUT5 => outRegister(5),
-            INPUT6 => outRegister(6),
-            INPUT7 => outRegister(7),
             S => A1,
             R => outMux1
         );
 
-    mux2: entity work.mux81
+    mux2: entity work.mux41
         PORT MAP(
             INPUT0 => outRegister(0),
             INPUT1 => outRegister(1),
             INPUT2 => outRegister(2),
             INPUT3 => outRegister(3),
-            INPUT4 => outRegister(4),
-            INPUT5 => outRegister(5),
-            INPUT6 => outRegister(6),
-            INPUT7 => outRegister(7),
             S => A2,
             R => outMux2
         );
@@ -99,3 +87,4 @@ BEGIN
     RD1 <= outMux1;
     RD2 <= outMux2;
 END estrutural;
+

@@ -1,0 +1,41 @@
+-- Version: 1.1
+-- Date: --/11/2024
+-- Owners: Gabriel D. Maruschi
+--			  Vitor Alexandre Garcia Vaz
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY mux41 is
+    GENERIC (
+        n   : integer :=4 -- numero de bits das entradas e da saida
+    );
+
+    PORT (
+        INPUT0  : IN STD_LOGIC_VECTOR (n-1 downto 0);
+        INPUT1  : IN STD_LOGIC_VECTOR (n-1 downto 0);
+        INPUT2  : IN STD_LOGIC_VECTOR (n-1 downto 0);
+        INPUT3  : IN STD_LOGIC_VECTOR (n-1 downto 0);
+        S       : IN STD_LOGIC_VECTOR (1 downto 0);
+        R       : OUT STD_LOGIC_VECTOR (n-1 downto 0)
+    );
+end mux41;
+
+
+ARCHITECTURE mux41_module OF mux41 IS
+
+    signal aux  : STD_LOGIC_VECTOR (n-1 downto 0);
+
+BEGIN
+
+	with S select
+	aux <= 	INPUT0 when "00",
+            INPUT1 when "01",
+            INPUT2 when "10",
+            else "11";
+				
+    R <= aux;
+
+END mux41_module;

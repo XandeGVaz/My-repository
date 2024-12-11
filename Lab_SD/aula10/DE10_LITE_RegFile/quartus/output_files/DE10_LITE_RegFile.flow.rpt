@@ -1,6 +1,6 @@
 Flow report for DE10_LITE_RegFile
-Sun Nov 24 11:03:33 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Wed Nov 27 11:18:28 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -38,28 +38,28 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Flow Summary                                                                        ;
-+------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov 24 11:03:30 2024          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                      ; DE10_LITE_RegFile                              ;
-; Top-level Entity Name              ; DE10_LITE_RegFile                              ;
-; Family                             ; MAX 10                                         ;
-; Device                             ; 10M50DAF484C7G                                 ;
-; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 51 / 49,760 ( < 1 % )                          ;
-;     Total combinational functions  ; 51 / 49,760 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 32 / 49,760 ( < 1 % )                          ;
-; Total registers                    ; 32                                             ;
-; Total pins                         ; 22 / 360 ( 6 % )                               ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                                  ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                                  ;
-+------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed Nov 27 11:18:25 2024       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; DE10_LITE_RegFile                           ;
+; Top-level Entity Name              ; DE10_LITE_RegFile                           ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C7G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 35 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 35 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 16 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 16                                          ;
+; Total pins                         ; 38 / 360 ( 11 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2024 11:03:15 ;
+; Start date & time ; 11/27/2024 11:18:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE10_LITE_RegFile   ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 2543595227479.173245699501356          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 31239352930894.173271708509248         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,11 +93,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4828 MB             ; 00:00:16                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 6231 MB             ; 00:00:09                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4736 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4899 MB             ; 00:00:02                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4795 MB             ; 00:00:10                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 5810 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4697 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4860 MB             ; 00:00:02                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,10 +106,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-2OQPH45  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-2OQPH45  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-2OQPH45  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-2OQPH45  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; 8-101-03         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; 8-101-03         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 8-101-03         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; 8-101-03         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
