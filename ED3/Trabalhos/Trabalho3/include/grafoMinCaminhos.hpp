@@ -1,0 +1,6 @@
+#ifndef GRAFOMINCAMINHOS_HPP
+#define GRAFOMINCAMINHOS_HPP
+
+#include "grafos.hpp"
+
+#endif // GRAFOMINCAMINHOS_HPP
