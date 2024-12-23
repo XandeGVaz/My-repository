@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Js</title>
+    <link rel="stylesheet" href = "estilo.css">
+</head>
+<body onload="onLoad()" onresize="onResize()">
+    <h1>Eventos JS</h1>
+    <h2>O que são?</h2>
+    <p>
+        Ações disparadas pela interação do usuário com a página
+    </p>
+    <p>
+        Existem muitos eventos. Os mais utilizados são:
+    </p>
+
+    <h2>onclick</h2>
+    <button onclick="eventoClick()" class="botao1">Clique aqui</button>
+
+    <h2>ondbclick</h2>
+    <button ondblclick="eventoDbClick()" class="botao1">Clique aqui</button>
+
+    <h2>onmouseover, onmouseout, onmousemove</h2>
+    <div id="onMouseTemplate1" style="margin: auto; width:80%; height: 200px; background-color: rgb(0,0,255);" onmouseover="eventoMouseOver()" onmouseout="eventoMouseOut()" onmousemove="eventoMouseMove()"> <!--Olhar console--></div>
+        
+
+    <h2>onmousedown e oumouseup</h2>
+    <div id="onMouseTemplate2" style="margin: auto ; width:80%; height: 200px; background-color: rgb(255,255,255); border: 0.2px double black" onmousedown="eventoMouseDown()" onmouseup="eventoMouseUp()">
+        <text> Clique, segure e solte</text>
+    </div> 
+
+    <h2>onfocus, onchange, onblur</h2>
+    <p>
+        Servem para tags do tipo input
+    </p>
+    <input id="input1" style="padding: 80px; font-size: 24px; margin: 0% 33% 0% 33%" type="text" placeholder="Digite alguma coisa" value="Texto antes do onfocus" onfocus="onFocus()" onchange="onChange()" onblur="onBlur()">
+
+    <h2>onkeydown, onkeypress e onkeyup</h2>
+    <p>
+        Também servem para tags do tipo input
+    </p>
+    <input id="input2" style="padding: 30px; font-size: 15px; margin: 0% 33% 0% 33%" type="text" placeholder="Key Down" onkeydown="onKeyDown()">
+    <input id="input3" style="padding: 30px; font-size: 15px; margin: 10px 33% 0% 33%" type="text" placeholder="Key Press" onkeypress="onKeyPress()">
+    <input id="input4" style="padding: 30px; font-size: 15px; margin: 10px 33% 0% 33%" type="text" placeholder="Key Up" onkeyup="onKeyUp()">
+
+    <h2>onload e onresize</h2>
+    <p>
+        Atribuídos ao corpo da página
+    </p>
+
+    <hr><br>
+    <div class="return">
+        <a href = "../index.html">Voltar à página principal</a>
+    </div>
+    <script src = "./JS/eventos.js"></script>
+</body>
+</html>

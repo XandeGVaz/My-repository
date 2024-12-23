@@ -70,6 +70,27 @@ h1,h2,h3,h4,h5,p,ul,ol{
     color:red;
 }
 
+/*Estilização de botões*/
+button.botao1{ /*Classe somente será válida para links*/
+    margin: 0% 43% 0% 43%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: greenyellow;
+    border: 5px solid green;
+    border-radius: 2px;
+    padding: 10px 15px 5px 15px;
+}
+button.botao1:hover{ /*Classe somente será válida para links*/
+    font-weight: bold;
+    color: white;
+    background-color: rgb(47, 50, 255);
+    border: 5px solid rgb(20, 220, 235);
+    border-radius: 2px;
+    padding: 20px 30px 10px 30px;
+}
+
 /*Botão de retorno à página principal*/
 .return{
     background-image: linear-gradient(to right,rgb(37, 13, 35),rgb(65, 9, 55));
