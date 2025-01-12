@@ -20,6 +20,25 @@
             <text class="destaque">Métodos que são funções dentro de propriedades</text>
         </li>
     </ul>
+    <h2>Exemplo</h2>
+    <div class="codigo">
+        <b>Classe carro</b> <br><br>
+        <text class="destaque">
+            const carro = {<br>
+            <br>
+                marca: "ford",<br>
+                modelo: "ka",<br>
+                ano: 2015,<br>
+                placa: "ABC-1234",<br>
+            <br>
+                buzina: function(){ alert("BIIIIIIIII")},<br>
+                completo: function(){<br>
+                    return "O carro é da marca " + this.marca + " e do modelo " + this.modelo;<br>
+                }<br>
+            <br>
+            };<br>
+        </text>
+    </div>
     
 
     <hr><br>
