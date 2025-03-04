@@ -1,5 +1,6 @@
 # My-repository
 <img
+  align="center"
   src="https://github.com/user-attachments/assets/d77060d7-006e-4b6b-8b38-bf6304b90b90"
   width="400px"
 />
