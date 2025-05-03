@@ -15,5 +15,3 @@ O objetivo deste repositório é consolidar o aprendizado de conceitos fundament
 2. Navegue até o diretório do programa desejado.
 3. Abra o arquivo `.m` no MATLAB e execute-o diretamente no ambiente.
 
-## Contato
-Para dúvidas ou sugestões, entre em contato com os alunos responsáveis.
