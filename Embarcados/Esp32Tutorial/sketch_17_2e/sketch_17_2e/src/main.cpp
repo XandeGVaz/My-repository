@@ -10,6 +10,7 @@
 // Objeto Servo
 Servo myServo;
 int adcVal = 0;
+int voltage = 0;
 int posServo = 0;
 
 void setup(){
@@ -26,10 +27,12 @@ void setup(){
 
 void loop() {
 
-  // Obtém-se nível ADC
+  // Obtém-se nível ADC e o valor aproximado em milivolts do sinal convertido
   adcVal = analogRead(ANALOG_PIN);
+  voltage = map(adcVal, MIN_ADC, MAX_ADC, 0, 3300);
 
-  Serial.printf("ADC: %d ", adcVal);
+
+  Serial.printf("ADC: %d  Voltage: %.2f", adcVal, (float)voltage/1000);
 
   // Adquire posição atual de acordo com o valor ADC obtido
   posServo = map(adcVal, MIN_ADC, MAX_ADC, 0, 180);
