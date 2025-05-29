@@ -32,3 +32,4 @@ plot(n, calcIntegral1(W,-0.5,0.5,n), 'b', 'LineWidth', 1.5);
 xlabel('no');
 ylabel('Integral');
 title('Valores da integral de W(v) ( DFT de rect(t) ) para diferentes valores de no');
+grid("on");
